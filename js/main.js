@@ -36,66 +36,43 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-
-// Image popup functionality
+// Add active class to current page nav link
 document.addEventListener('DOMContentLoaded', () => {
-    const popup = document.querySelector('.image-popup');
-    const popupContent = popup.querySelector('.popup-content');
-    const popupImg = popup.querySelector('.popup-content img');
-    const triggers = document.querySelectorAll('.grid-item img');
-    const closeBtn = popup.querySelector('.close-popup');
-    let isZoomed = false;
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('nav a');
 
-    // Open popup
-    triggers.forEach(img => {
-        img.addEventListener('click', () => {
-            popupImg.src = img.src;
-            popupImg.alt = img.alt;
-            popup.classList.add('active');
-            document.body.style.overflow = 'hidden';
-            isZoomed = false;
-            popupImg.classList.remove('zoomed');
-            popupContent.classList.remove('scrollable');
-        });
-    });
+    navLinks.forEach(link => {
+        const linkPath = new URL(link.href).pathname;
 
-    // Toggle zoom
-    popupImg.addEventListener('click', (e) => {
-        e.stopPropagation();
-        isZoomed = !isZoomed;
-        popupImg.classList.toggle('zoomed');
-        popupContent.classList.toggle('scrollable');
+        // Handle home page
+        if ((currentPath === '/' || currentPath === '/index.html') && 
+            (linkPath === '/' || linkPath === '/index.html')) {
+            link.classList.add('active');
+        }
         
-        if (isZoomed) {
-            // Center the click point when zooming in
-            const rect = popupContent.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            popupContent.scrollLeft = (popupImg.offsetWidth * 1.5 - rect.width) / 2;
-            popupContent.scrollTop = (popupImg.offsetHeight * 1.5 - rect.height) / 2;
+        // Handle about page
+        else if (currentPath.includes('/about.html') && linkPath.includes('/about.html')) {
+            link.classList.add('active');
+        }
+        
+        // Handle portfolio section
+        else if (currentPath.includes('/portfolio') && linkPath.includes('/portfolio')) {
+            link.classList.add('active');
+        }
+        
+        // Handle exact matches for other pages
+        else if (currentPath === linkPath) {
+            link.classList.add('active');
         }
     });
+});
 
-    // Close popup
-    const closePopup = () => {
-        popup.classList.remove('active');
-        popupImg.classList.remove('zoomed');
-        popupContent.classList.remove('scrollable');
-        document.body.style.overflow = '';
-        isZoomed = false;
-    };
-
-    closeBtn.addEventListener('click', closePopup);
-    popup.addEventListener('click', (e) => {
-        if (e.target.classList.contains('popup-overlay')) {
-            closePopup();
-        }
-    });
-
-    // Close on escape key
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && popup.classList.contains('active')) {
-            closePopup();
-        }
-    });
+// Add animation trigger
+document.addEventListener('DOMContentLoaded', () => {
+    const animatedElements = document.querySelectorAll('.animate-slide-in');
+    setTimeout(() => {
+        animatedElements.forEach(element => {
+            element.classList.add('show');
+        });
+    }, 100);
 });

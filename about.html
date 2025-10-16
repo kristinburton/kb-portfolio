@@ -7,11 +7,12 @@
     <meta name="description" content="Kristin Burton - Web Designer with over a decade of experience in web development.">
     <meta name="keywords" content="Web Design, Web Development, UI/UX, Freelance, Portfolio">
     <meta name="author" content="Kristin Burton">   
-    <link href="/css/style.css" rel="stylesheet">
-    <link href="/scripts/main.js" rel="script">
+     <link href="/css/style.css" rel="stylesheet">
+    <script src="/js/main.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <header class="header">
@@ -19,12 +20,21 @@
             <div class="logo">
                 <h1>KB</h1>
             </div>
-            <nav>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav-menu">
                 <ul>
                     <li><a href="/index.html">Home</a></li>
-                    <li><a href="/portfolio/">Portfolio</a></li>
+                    <li><a href="/portfolio/">Portfolio</a>
+                        <ul>
+                            <li><a href="/portfolio/marquis-help-center-design.html">Marquis Help Center</a></li>
+                            <li><a href="/portfolio/life360-help-center-design.html">Life360 Help Center</a></li>
+                            <li><a href="/portfolio/stpaul-help-center-design.html">St. Paul Help Center</a></li>
+                        </ul>
+                    </li>
                     <li><a href="/about.html">About</a></li>
-                    <li><a href="/downloads/kristin-burton-resume.pdf">Resume</a></li>
+                    <li><a href="/downloads/kristin-burton-resume.pdf" target="_blank">Resume</a></li>
                     <li><a href="mailto:kristin@kristin-burton.com">Email me</a></li>
                 </ul>
             </nav>
@@ -40,38 +50,59 @@
                         <div class="main-image">
                             <img src="/assets/profile-image.jpeg" alt="Kristin Burton">
                         </div>
-                        <div class="side-image side-image-2">
-                        </div>
                     </div>
                 </div>
                 <div class="hero-about-content">
-                    <h1>Hi, I'm Kristin Burton</h1>
-                    <p class="intro">a web designer with over a decade experience in web&nbsp;&lt;development /&gt; </p>
-                    <a href="#contact" class="cta-button">Let's Work Together</a>
+                    <h1>About Me </h1>
+                    <p>For over 12 years, coding was my main focus. I started out building B2C websites, then transitioned into the B2B space at Zendesk, where I worked as a front-end developer. My goal was always the same: bring designs to life with pixel-perfect precision, delivering high-quality results that met both creative and budget goals.</p>
+                    <p>But at the heart of it all, design has always been my true passion.</p>
+                    <p>Front-end development gave me a unique balance—I got to flex my logical, problem-solving side while watching creative ideas take shape on the screen. Over time, I found myself more drawn to the design process itself: crafting the visuals, shaping the experience, and making sure every detail felt just right.</p>
+                    <p>At Zendesk, I began designing custom help centers for clients, which deepened my love for UX and visual storytelling. That eventually led me to a contract role at Go Envoy, where I now focus primarily on web design, with occasional development work.</p>
+                    <p>Websites and apps have become my creative playground. I love designing experiences that feel intuitive, beautiful, and purposeful. Whether I'm laying out a page, choosing a color palette, or pairing the perfect typography, I'm always thinking about how it makes someone feel when they land on a site.</p>
+                    <p>I believe we're always evolving—and I'm constantly learning and growing as a designer. Right now, I'm focused on sharpening my skills, exploring new design trends, and creating work that's both functional and inspiring.</p>
                 </div>
             </div>
         </div>
     </section>
-    <section id="about">
+    <div class="about-hobbies-container">
+        <div class="container about-hobbies-grid">
+            <div class="about-hobbies-text">
+                <h2>Outside of Work, You'll Find Me…</h2>
+                <ul>
+                    <li>Soaking up time with my kids and family 💛</li>
+                    <li>Catching up with friends over coffee (or wine!)</li>
+                    <li>On my yoga mat or at the gym 🧘‍♀️💪</li>
+                    <li>Sipping strong coffee—always ☕</li>
+                    <li>Listening to new songs/artists, curating the perfect playlist or attending a concert 🎶</li>
+                    <li>Hiking, camping, and getting outside whenever I can 🌲</li>
+                    <li>Planning my next adventure (passport always ready!) ✈️</li>
+                    <li>Reorganizing literally anything just for fun 😄</li>
+                    <li>Getting lost in a good book 📚</li>   
+                    <li>Constantly learning, growing, and leveling up 🌱</li>
+                </ul>
+            </div>
+            <div class="about-hobbies-image">
+                <img src="/assets/side-image2.jpg" alt="Kristin Burton">
+            </div>
+        </div>
+    </div>
+    <footer>
       <div class="container">
-        <div class="about-content">
-            <div class="about-text">
-                <h2>About Me</h2>
-                <p>I'm a web designer and developer based in California, specializing in creating modern, responsive websites that drive results.</p>
-                <a href="#work" class="secondary-button">View My Work</a>
-            </div>
-            <div class="about-image">
-                <img src="/assets/profile-image.jpeg" alt="Kristin Burton">
-            </div>
-        </div>
+          <div class="footer-content">
+              <p>&copy; 2025 Kristin Burton. All rights reserved.</p>
+              <div class="social-icons">
+                  <a href="www.linkedin.com/in/kristin-burton" target="_blank" rel="noopener noreferrer">
+                      <i class="fab fa-linkedin"></i>
+                  </a>
+                  <a href="mailto:kristin@kristin-burton.com">
+                      <i class="far fa-envelope"></i>
+                  </a>
+                  <a href="https://instagram.com/your-profile" target="_blank" rel="noopener noreferrer">
+                      <i class="fab fa-instagram"></i>
+                  </a>
+              </div>
+          </div>
       </div>
-    </section>
-
-
-      <footer>
-        <div class="container">
-          <p>&copy; 2025 Kristin Burton. All rights reserved.</p>
-        </div>
-      </footer>
+    </footer>
   </body>
 </html>
