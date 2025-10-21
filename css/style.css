@@ -57,6 +57,11 @@ body {
     color: var(--text-color);
  }
 
+.logo h1 a {
+    text-decoration: none;
+    color: var(--text-color);
+}  
+
 @media (max-width: 768px) {
     .header {
         padding: 1rem 0; 
@@ -110,6 +115,15 @@ nav a.active::after {
     bottom: -4px;
     left: 0;
     background-color: var(--primary-color);
+}
+
+nav ul li ul li a.active {
+    color: var(--text-color);
+}
+
+nav ul li ul li a.active::after {
+    background-color: transparent;
+    height: 0;
 }
 
 .container {
@@ -246,12 +260,12 @@ p.intro {
     gap: 4rem;
     align-items: start;
     min-height: calc(100vh - 80px); /* Adjust 80px based on your header height */
-    padding: 7rem 0 2rem;
+    padding: 5rem 0 2rem;
     position: relative;
 }
 
 .hero-about-content {
-    padding: 50px 0;
+    padding: 100px 0 50px;
 }
 
 .hero-about-grid p {
@@ -260,8 +274,8 @@ p.intro {
 
 .about-hobbies-container {
     padding: 3rem 0;
-    background-color: var(--primary-color);
-    color: var(--text-color);
+    background-color: var(--primary-color-hover);
+    color: var(--white);
     min-width: none;
     text-align: left;
 }
@@ -279,13 +293,17 @@ p.intro {
     padding-left: 0;
 }   
 
+.about-hobbies-container ul li {
+    margin: 8px 0;
+}
+
  .about-hobbies-image {
     max-width: 100%;
-    width: 500px;
+    width: 400px;
     margin: 0;
     border-radius: 16px;
     overflow: hidden;   
-    height: 450px;
+    height: 470px;
  }
 
  .about-hobbies-image img {
@@ -294,6 +312,23 @@ p.intro {
     object-fit: cover;
     border-radius: 16px;
     object-position: bottom;
+}
+
+.hero-about-image {
+    width: 100%;
+    position: sticky;
+    top: 8em; /* Adjust based on your header height */
+    height: fit-content;
+    height: calc(100vh - 120px); /* Viewport height minus header and padding */
+   align-self: start;
+}
+
+.hero-about-image-grid {
+    display: grid;
+    grid-template-columns: 0.3fr 1fr;
+    gap: 1rem;
+    align-items: center;
+    height: 540px; /* Set fixed height for the grid */
 }
 
 /* Add responsive styles */
@@ -323,20 +358,24 @@ p.intro {
     .hero-about-grid {
         grid-template-columns: 1fr;
         min-height: auto; /* Remove fixed height constraint */
-        padding: 8rem 0 2rem; /* Add padding top to account for fixed header */
+        padding: 2rem 0 2rem; /* Add padding top to account for fixed header */
         text-align: center;
     }
 
     .hero-about-image-grid {
-        height: 300px; /* Reduce height on mobile */
+        display: block;   
+        height: 350px; /* Reduce height on mobile */
     }
 
     .hero-about-image {
-        order: 2;
+        order: 1;
+        position: static;
+        height: auto;
     }
 
     .hero-about-content {
-        order: 1;
+        order: 2;
+        padding: 0 0 20px;
     }
 
     .hero-about-content h1 {
@@ -346,17 +385,13 @@ p.intro {
     .hero-about-content p.intro {
         font-size: 1.2rem;
     }
+
+    .about-hobbies-image {
+        display: none;
+    }
 }
 
 @media (max-width: 480px) {
-    .hero-about-grid {
-        padding: 7rem 0 1rem;
-    }
-
-    .hero-about-image-grid {
-        height: 250px; /* Even shorter on smaller devices */
-    }
-
     .hero-about-content h1 {
         font-size: 2rem;
     }
@@ -365,24 +400,6 @@ p.intro {
         font-size: 1.1rem;
     }
 }
-
-.hero-about-image {
-    width: 100%;
-    position: sticky;
-    top: 8em; /* Adjust based on your header height */
-    height: fit-content;
-    height: calc(100vh - 120px); /* Viewport height minus header and padding */
-   align-self: start;
-}
-
-.hero-about-image-grid {
-    display: grid;
-    grid-template-columns: 0.3fr 1fr;
-    gap: 1rem;
-    align-items: center;
-    height: 540px; /* Set fixed height for the grid */
-}
-
 .main-image, .side-image {
     height: 100%; /* Make containers full height */
 }
@@ -395,10 +412,6 @@ p.intro {
     border-radius: 16px;
 }
 
-.main-image, .side-image-1 {
-    background-image: url(/assets/side-image1.jpg);
-}
-
 .main-image img, .side-image img {
     width: 100%;
     height: 100%;
@@ -407,7 +420,6 @@ p.intro {
 }
 
 .main-image img {
-    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
     border-radius:  16px;
 }
 
@@ -436,6 +448,10 @@ p.intro {
     .hero-image-grid {
         grid-template-columns: 1fr;
         gap: 0;
+    }
+
+    .main-image img {
+        object-position: 0 -30px;
     }
     
     .side-image {
@@ -788,6 +804,57 @@ footer {
     bottom: -8px;
 }
 
+nav ul li {
+    position: relative;
+}
+
+nav ul ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    background: var(--background-color);
+    min-width: 200px;
+    padding: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    border-top: 2px solid var(--primary-color);
+    gap: 0.5rem;
+}
+
+nav ul li:hover > ul {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+nav ul ul li {
+    padding: 0;
+    display: block;
+}
+
+nav ul ul a {
+    display: block;
+    padding: 0.5rem 1.5rem;
+    color: var(--text-color);
+    font-size: 0.9rem;
+
+}
+
+nav ul ul a::after{
+    height: 0;
+    background-color: transparent;
+}
+
+nav ul ul a:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
 @media (max-width: 768px) {
     .mobile-menu-btn {
         display: block;
@@ -814,14 +881,38 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 2rem;
-        padding-top: 2rem;
+        gap: 1rem;
+        padding-top: 1rem;
     }
 
     .nav-menu a {
         font-size: 1.2rem;
         display: block;
         padding: 1rem;
+        text-align: center;
+    }
+
+    nav.nav-menu ul li a ul {
+        visibility: hidden;
+        height: 0;
+    }
+
+    nav.nav-menu ul li a.active + ul {
+        position: static;
+        box-shadow: none;
+        height: 100%;
+        padding: 0;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        background: transparent;
+        min-width: auto;
+        gap: 0.5rem;
+    }
+
+    nav ul ul li a {
+        padding-left: 2rem;
+        font-size: 1rem;
     }
 
     .nav-menu a:hover {
@@ -1009,6 +1100,7 @@ footer {
     .project-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
+        justify-items: center;
     }
     .project-info {
         max-width: 600px;
@@ -1077,7 +1169,7 @@ footer {
         margin: 2rem 0;
     }
 
-    .grid-row.three-columns,
+    .grid-row.four-columns,
     .grid-row.two-columns {
         grid-template-columns: 1fr;
     }
@@ -1111,25 +1203,19 @@ footer {
     }
 }
 
-
-
 .grid-row {
     display: grid;
     gap: 2rem;
 }
 
-
 .grid-row.two-columns {
     grid-template-columns: repeat(2, 1fr);
 }
 
-
-@media (max-width: 768px){
-        .grid-row.two-columns {
-        grid-template-columns: 1fr;
-    }
+.grid-row.four-columns {
+    grid-template-columns:repeat(4, 1fr);
+     align-items: start;
 }
-
 
 .grid-item img {
     width: 100%;
@@ -1139,6 +1225,14 @@ footer {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.grid-row.four-columns .grid-item img {
+    width: 100%;
+    height: 1253px; /* Forced image height */
+    object-fit: cover; /* Ensures images fill the space without distortion */
+    display: block;
+    object-position: top;
+}
+
 .grid-item.full-width img {
     width: 100%;
     border-radius: 8px;
@@ -1146,25 +1240,14 @@ footer {
 }
 
 
-.popup-content {
-    position: relative;
-    width: 90%;
-    height: 90vh;
-    margin: auto;
-    z-index: 1001;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.3s ease;
-}
-
-.popup-content img {
-    max-width: 100%;
-    max-height: 90vh;
-    object-fit: contain;
-    transform-origin: center;
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    cursor: zoom-in;
+@media (max-width: 768px){
+    .grid-row.four-columns,
+    .grid-row.two-columns {
+        grid-template-columns: 1fr;
+    }
+    .grid-row.four-columns .grid-item img {
+        height: auto; /* Reset height on smaller screens */
+    }
 }
 
 .animate-slide-in {
@@ -1186,74 +1269,5 @@ footer {
     to {
         opacity: 1;
         transform: translateY(0);
-    }
-}
-
-nav ul li {
-    position: relative;
-}
-
-nav ul ul {
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    position: absolute;
-    top: 25px;
-    left: 0;
-    background: var(--background-color);
-    min-width: 200px;
-    padding: 1rem 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(10px);
-    transition: all 0.3s ease;
-    border-top: 2px solid var(--primary-color);
-    gap: 0.5rem;
-}
-
-nav ul li:hover > ul {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-nav ul ul li {
-    padding: 0;
-    display: block;
-}
-
-nav ul ul a {
-    display: block;
-    padding: 0.5rem 1.5rem;
-    color: var(--text-color);
-    font-size: 0.9rem;
-
-}
-
-nav ul ul a::after{
-    height: 0;
-    background-color: transparent;
-}
-
-nav ul ul a:hover {
-    background: rgba(0, 0, 0, 0.05);
-}
-
-@media (max-width: 768px) {
-    nav ul ul {
-        position: static;
-        box-shadow: none;
-        padding: 0;
-        opacity: 1;
-        visibility: visible;
-        transform: none;
-        background: transparent;
-        min-width: auto;
-    }
-
-    nav ul ul li a {
-        padding-left: 2rem;
-        font-size: 1rem;
     }
 }
