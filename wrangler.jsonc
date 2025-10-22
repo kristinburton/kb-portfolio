@@ -1,8 +1,0 @@
- {
-"name": "worker-name",
-"compatibility_date": "2025-10-21",
-"main": "/index.ts",
- "assets": {
-"directory": "./dist"
- }
- }
