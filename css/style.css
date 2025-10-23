@@ -1,13 +1,7 @@
 :root {
     --primary-color: #B57BA6;
     --secondary-color: #BC4230;
-    /* --accent-color: #B57BA6; */
     --primary-color-hover: #683B5C;
-    /* --secondary-accent-color: #BC4230; */
-    /* bright orange #F18F01    */
-    /* muted orange #BA5A31 */
-    /* redwood red #AA5042 */
-    /* chestnut #A44A3F */
     --background-color: #FFF7ED;
     --text-color: #251101;
     --white: #FBF0E3;

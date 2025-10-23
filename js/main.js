@@ -51,7 +51,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         // Handle about page
-        else if (currentPath.includes('/about.html') && linkPath.includes('/about.html')) {
+        else if ((currentPath === '/about' || currentPath === '/about.html') && 
+            (linkPath === '/about' || linkPath === '/about.html')) {
             link.classList.add('active');
         }
         
