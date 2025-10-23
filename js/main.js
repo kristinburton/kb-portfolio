@@ -44,29 +44,50 @@ document.addEventListener('DOMContentLoaded', () => {
     navLinks.forEach(link => {
         const linkPath = new URL(link.href).pathname;
 
-        // Handle home page
-        if ((currentPath === '/' || currentPath === '/index.html') && 
+        // --- HOME ---
+        if ((currentPath === '/' || currentPath === '/index.html') &&
             (linkPath === '/' || linkPath === '/index.html')) {
             link.classList.add('active');
         }
-        
-        // Handle about page
-        else if ((currentPath === '/about' || currentPath === '/about.html') && 
+
+        // --- ABOUT ---
+        else if ((currentPath === '/about' || currentPath === '/about.html') &&
             (linkPath === '/about' || linkPath === '/about.html')) {
             link.classList.add('active');
         }
-        
-        // Handle portfolio section
+
+        // --- PORTFOLIO SECTION ---
         else if (currentPath.includes('/portfolio') && linkPath.includes('/portfolio')) {
+            // Highlight main portfolio nav item
             link.classList.add('active');
         }
-        
-        // Handle exact matches for other pages
-        else if (currentPath === linkPath) {
+
+        // --- PORTFOLIO PROJECT PAGES (sub-active) ---
+        const portfolioPages = [
+            '/portfolio/marquis-help-center-design',
+            '/portfolio/life360-help-center-design',
+            '/portfolio/stpaul-help-center-design'
+        ];
+
+        portfolioPages.forEach(page => {
+            if (currentPath === page || currentPath === `${page}.html`) {
+                if (linkPath === page || linkPath === `${page}.html`) {
+                    link.classList.add('sub-active');
+                }
+
+                // Highlight nested links inside project nav (if present)
+                const nestedLinks = document.querySelectorAll(`nav a[href^="${page}"]`);
+                nestedLinks.forEach(nestedLink => nestedLink.classList.add('sub-active'));
+            }
+        });
+
+        // --- OTHER EXACT MATCHES ---
+        if (currentPath === linkPath) {
             link.classList.add('active');
         }
     });
 });
+
 
 // Add animation trigger
 document.addEventListener('DOMContentLoaded', () => {

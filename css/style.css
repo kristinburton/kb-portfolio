@@ -115,6 +115,10 @@ nav ul li ul li a.active {
     color: var(--text-color);
 }
 
+nav ul li ul li a.active.sub-active {
+    color: var(--primary-color);
+}
+
 nav ul li ul li a.active::after {
     background-color: transparent;
     height: 0;
