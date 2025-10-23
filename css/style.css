@@ -500,10 +500,11 @@ p.intro {
     padding: 2rem 0 2rem;
 }
 
-.portfolio-landing-grid .portfolio-landing-item {
+.portfolio-landing-grid 
+.portfolio-landing-item {
     max-width: 100%;
-    width: 400px;
-    height: 400px;
+    width: auto;
+    height: 380px;
     border-radius: 16px;
     border: 2px solid var(--text-color);
     overflow: hidden;
@@ -513,7 +514,7 @@ p.intro {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 968px) {
 
     .portfolio-landing-grid {
         grid-template-columns: 1fr;
