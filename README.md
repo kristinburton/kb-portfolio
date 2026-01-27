@@ -98,4 +98,4 @@ Client work is shown with permission from **Envoy**.
 
 📧 **Email:** kristin@kristin-burton.com
 🌐 **Website:** wwww.kristin-burton.com
-📱 **LinkedIn** www.linkedin.com/in/kristin-burton
+📱 **LinkedIn** https://www.linkedin.com/in/kristin-burton
