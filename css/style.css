@@ -204,8 +204,9 @@ p.intro {
 
 #hero {
     padding-top: 115px;
-    background-image: url('/assets/hero-image.jpg');
-    background-position: left center;
+    /* background-image: url('/assets/hero-image.jpg'); */
+    background-color: #743864;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
