@@ -1,101 +1,126 @@
-# 🎨 Kristin Burton Portfolio
+# Kristin Burton — Portfolio
 
-A personal portfolio website to showcase current web design projects, with a focus on client work completed for **Envoy** as part of my freelance web design role. The portfolio highlights clean, responsive design and thoughtful UX, with prototypes created using **Figma**.
+React + TypeScript + Tailwind + shadcn/ui portfolio with 6 case studies.
 
----
-
-## 📁 Table of Contents
-
-- [About](#about)
-- [Design Tools Used](#design-tools-used)
-- [Client Projects](#client-projects)
-- [Getting Started](#getting-started)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-- [Credits](#credits)
-- [Contact](#contact)
+## Stack
+- **React 18** + **TypeScript**
+- **Vite** (dev server + build)
+- **Tailwind CSS v3** with custom brand tokens
+- **shadcn/ui** (Button, Badge — extend via `npx shadcn@latest add <component>`)
+- **React Router v6** for routing
+- **Lucide React** for icons
 
 ---
 
-## 📌 About
+## Quick Start
 
-This portfolio serves as a central place to:
+```bash
+npm install
+npm run dev
+```
 
-- Share completed and ongoing design projects
-- Demonstrate UI/UX design skills
-- Highlight work done for **Envoy** and other clients
-- Provide potential clients or employers a preview of my design style
-
----
-
-## 🛠 Design Tools Used
-
-- [Figma](https://figma.com) – for creating responsive layouts, UI prototypes, and design systems
-
+Open [http://localhost:5173](http://localhost:5173)
 
 ---
 
-## 🚀 Client Projects
+## Project Structure
 
-Freelance projects created for **[Envoy](https://goenvoy.co/)** 
-
-Work includes:
-
-- Zendesk Help Center Designs for clients which include: 
-- Landing pages
-- Article pages
-- Contact forms
-- Category/Sections pages
-- Responsive layouts
-
-- I have also designed and worked on apps within Zendesk but am unable to showcase the designs
-
----
-
-## 🧰 Getting Started
-
-> Note: This is primarily a design portfolio, so no code setup is required. However, if this is deployed as a live site, here’s how to run it locally (if applicable):
-
-### Prerequisites
-
-If this is a static website (HTML/CSS/JS), ensure you have:
-
-- A modern web browser
-- (Optional) A local web server like Live Server for VSCode
+```
+src/
+├── components/
+│   ├── layouts/
+│   │   ├── HeroSplitLayout.tsx   ← Used by: St. Paul, Marquis, Life360, Adopt a Pet, MEF
+│   │   └── BentoGridLayout.tsx   ← Used by: FedLogic Dashboard
+│   ├── ui/
+│   │   ├── button.tsx            ← shadcn Button
+│   │   └── badge.tsx             ← shadcn Badge
+│   ├── ImagePlaceholder.tsx      ← Swap src prop to add real images
+│   └── Navbar.tsx
+├── data/
+│   └── caseStudies.ts            ← ⭐ ALL content lives here
+├── pages/
+│   ├── PortfolioIndex.tsx        ← /
+├── lib/
+│   └── utils.ts                  ← cn() helper
+├── App.tsx                       ← Router
+├── main.tsx
+└── index.css                     ← Brand CSS variables + Tailwind
+```
 
 ---
 
-## ▶️ Usage
+## Adding Content
 
-Visit the live portfolio (link here when hosted, e.g., Netlify, Vercel, or GitHub Pages).  
-Browse the Projects section to view details, images, and Figma links to designs.
+### Fill in placeholder text
+Open `src/data/caseStudies.ts`. Every `[bracketed placeholder]` is a field waiting for your real copy. The TypeScript types will guide you — each layout has a specific shape:
+
+- **HeroSplitCaseStudy** — `star`, `screens[]`, `outcomes[]`
+- **BentoCaseStudy** — `cells[]` array of bento blocks
+
+### Add real images
+
+1. Drop your images into `src/assets/` (create the folder)
+2. Import at the top of `caseStudies.ts`:
+   ```ts
+   import stPaulCover from '@/assets/stpaul-cover.jpg'
+   ```
+3. Set the `coverImage` field on the case study:
+   ```ts
+   coverImage: stPaulCover,
+   ```
+4. For screen shots, set `src` on each item in the `screens` array:
+   ```ts
+   screens: [
+     { label: 'Landing Page — Hero + Search', src: stPaulScreen1 },
+     ...
+   ]
+   ```
+
+### Add a new case study
+1. Add an entry to the `caseStudies` array in `caseStudies.ts`
+2. Choose `layout: 'hero-split'` or `layout: 'bento-grid'`
+3. Fill in the required fields (TypeScript will catch anything missing)
+4. The route `/projects/<your-slug>` and the index card are generated automatically
+
+### Add more shadcn components
+```bash
+npx shadcn@latest add card
+npx shadcn@latest add separator
+npx shadcn@latest add tooltip
+```
 
 ---
 
-## 🤝 Contributing
+## Brand Colors
 
-This is a personal portfolio and not open for contributions at this time.
+Defined in `tailwind.config.ts` under `theme.extend.colors.brand`:
+
+| Token | Value | Usage |
+|---|---|---|
+| `brand-purple` | `#A2519E` | Primary CTAs, accents |
+| `brand-purple-mid` | `#7d4e7a` | Hover states |
+| `brand-purple-dark` | `#6d4070` | Dark accents |
+| `brand-footer-dark` | `#2a1f35` | Navbar, headings |
+| `brand-coral` | `#E89C79` | Section labels, outcomes |
+| `brand-coral-accent` | `rgba(232,156,121,0.8)` | Transparent coral |
+| `brand-off` | `#F8F5F9` | Page background |
+| `brand-muted` | `#6b5c75` | Body text, labels |
+| `brand-border` | `#e8dff0` | All borders |
+
+Use them in Tailwind like: `bg-brand-purple`, `text-brand-coral`, `border-brand-border`
 
 ---
 
-## 📄 License
+## Deploy
 
-This project is licensed under the [MIT License](LICENSE), unless otherwise noted.  
-Client work is shown with permission from **Envoy**.
+```bash
+npm run build    # outputs to /dist
+```
 
----
+Drop `/dist` into Netlify, Vercel, or your existing host. No server needed — it's a pure static SPA.
 
-## 🙏 Credits
-
-- Client projects via [Envoy](https://goenvoy.co/)
-- Inspiration from other creatives in the design community
-- All designs created by Kristin Burton
-
----
-
-## 📬 Contact
-
-📧 **Email:** kristin@kristin-burton.com
-🌐 **Website:** wwww.kristin-burton.com
-📱 **LinkedIn** https://www.linkedin.com/in/kristin-burton
+For Netlify, add a `_redirects` file in `/public`:
+```
+/*  /index.html  200
+```
+(Already included in this project.)
