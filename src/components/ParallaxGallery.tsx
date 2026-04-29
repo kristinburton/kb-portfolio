@@ -100,7 +100,6 @@ function PhoneMockup({ imageSrc }: { imageSrc?: string }) {
 // ── ParallaxGallery ───────────────────────────────────────────────────────────
 
 interface ParallaxGalleryProps {
-  eyebrow?: string
   title?: string
   main?: string               // center browser mockup
   left?: string               // left browser mockup
@@ -108,7 +107,6 @@ interface ParallaxGalleryProps {
 }
 
 export function ParallaxGallery({
-  eyebrow = 'Key Screens',
   title = 'The Final Product',
   main,
   left,
@@ -124,8 +122,7 @@ export function ParallaxGallery({
   return (
     <section className="parallax-gallery">
       <div ref={revealRef} className={`parallax-gallery__inner reveal${isVisible ? ' is-visible' : ''}`}>
-        <p className="text-coral font-bold uppercase tracking-[0.15em] text-[0.8rem] mb-3">{eyebrow}</p>
-        <h2 className="parallax-gallery__title font-condensed font-bold text-cream mb-16">{title}</h2>
+        <h2 className="parallax-gallery__title font-condensed text-center font-bold text-cream mb-16">{title}</h2>
 
         <div className="parallax-gallery__stage">
           {main && (

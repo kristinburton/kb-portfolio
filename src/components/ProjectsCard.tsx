@@ -33,7 +33,7 @@ export function ProjectsCard({ study, index = 0, cover, coverBg = '#1e1530', log
         >
           {/* Cover — the hero of the card */}
           <div
-            className="aspect-[4/3] rounded-sm border border-white/[0.08] overflow-hidden flex items-center justify-center"
+            className="aspect-[4/3] rounded-sm overflow-hidden flex items-center justify-center"
             style={{ background: coverBg }}
           >
             {cover ? (

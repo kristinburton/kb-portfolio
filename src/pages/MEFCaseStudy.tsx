@@ -1,8 +1,7 @@
-import { useNavigate } from 'react-router-dom'
 import { Navbar } from '@/components/Navbar'
 import { CaseStudyBack } from '@/components/CaseStudyBack'
-import { Button } from '@/components/ui/button'
 import { ParallaxGallery } from '@/components/ParallaxGallery'
+import { WantToSeeMore } from '@/components/WantToSeeMore'
 import mefLanding from '@/assets/MEF-CaseStudy-Top-Landing.png'
 import mefInterior from '@/assets/MEF-CaseStudy-Top-Interior.png'
 import mefDesktopTop from '@/assets/MEF-CaseStudy-Grid-Desktop-One.png'
@@ -11,7 +10,6 @@ import mefMobileTop from '@/assets/MEF-CaseStudy-Grid-Mobile-One.png'
 import mefMobileBottom from '@/assets/MEF-CaseStudy-Grid-Mobile-Two.png'
 
 export function MEFCaseStudy() {
-  const navigate = useNavigate()
   const overviewCards = [
     { id: 'overview-left', src: mefLanding, alt: 'MEF Gala invitation page' },
     { id: 'overview-right', src: mefInterior, alt: 'MEF Gala event details page' },
@@ -126,17 +124,7 @@ export function MEFCaseStudy() {
         phone={mefMobileTop}
       />
 
-      <section id="mef-cta" className="px-4 pb-20 pt-8 text-center sm:px-6 md:px-10 md:pb-24 lg:px-20">
-        <div className="mx-auto max-w-[900px]">
-          <h2 className="font-condensed text-[36px] font-bold text-cream min-[390px]:text-5xl md:text-7xl">Want to see more?</h2>
-          <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
-            <Button variant="pill-coral" size="pill-md" onClick={() => navigate('/projects')}>View all work</Button>
-            <Button asChild variant="pill-ghost" size="pill-md">
-              <a href="mailto:kristin@kristin-burton.com">Contact me</a>
-            </Button>
-          </div>
-        </div>
-      </section>
+      <WantToSeeMore />
     </div>
   )
 }

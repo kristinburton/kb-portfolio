@@ -372,7 +372,7 @@
     font-size: clamp(3rem, 9vw, 6rem);
   }
   .portfolio-hero__dek {
-    font-size: clamp(0.95rem, 2vw, 1.1rem);
+    font-size: clamp(0.95rem, 2vw, 1.25rem);
   }
   .marquee__fade-left {
     background: linear-gradient(to right, rgba(42,31,53,0.95), transparent);
@@ -783,7 +783,7 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 3.5rem;
-    align-items: start;
+    align-items: center;
   }
   .about__grid--center { align-items: center; }
   .about__photo-sticky { position: sticky; top: 7rem; }
@@ -849,7 +849,7 @@
   .cs-hero__gradient--marquis {
     background: linear-gradient(135deg, rgba(139,90,135,0.3) 0%, #2a1f35 50%, rgba(109,64,112,0.2) 100%);
   }
-  .cs-hero__gradient--fedlogic {
+  .cs-hero__gradient--dashboard {
     background: linear-gradient(135deg, rgba(13,31,53,0.7) 0%, rgba(26,48,80,0.7) 50%, rgba(30,58,95,0.7) 100%);
   }
   .cs-hero__gradient--portfolio {
@@ -1127,7 +1127,7 @@
 
 
 
-  /* ─── FedlogicCaseStudy ───────────────────────────────────── */
+  /* ─── DashboardCaseStudy ───────────────────────────────────── */
   .dashboard-card {
     border-radius: 12px;
     overflow: hidden;

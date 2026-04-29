@@ -1,8 +1,7 @@
-import { useNavigate } from 'react-router-dom'
 import { Navbar } from '@/components/Navbar'
 import { CaseStudyBack } from '@/components/CaseStudyBack'
-import { Button } from '@/components/ui/button'
 import { ParallaxGallery } from '@/components/ParallaxGallery'
+import { WantToSeeMore } from '@/components/WantToSeeMore'
 import portfolioLanding from '@/assets/Portfolio-CaseStudy-Grid-Desktop-One.png'
 import portfolioInterior from '@/assets/Portfolio-CaseStudy-Top-Interior.png'
 import portfolioDesktopTop from '@/assets/Portfolio-CaseStudy-Grid-Desktop-One.png'
@@ -11,7 +10,6 @@ import portfolioMobileTop from '@/assets/Portfolio-CaseStudy-Grid-Mobile-One.png
 import portfolioMobileBottom from '@/assets/Portfolio-CaseStudy-Grid-Mobile-Two.png'
 
 export function PortfolioCaseStudy() {
-  const navigate = useNavigate()
   const overviewCards = [
     { id: 'overview-left', src: portfolioLanding, alt: 'New portfolio home page — animated hero' },
     { id: 'overview-right', src: portfolioInterior, alt: 'New portfolio case study page' },
@@ -126,17 +124,7 @@ export function PortfolioCaseStudy() {
         phone={portfolioMobileTop}
       />
 
-      <section id="portfolio-cta" className="px-4 pb-20 pt-8 text-center sm:px-6 md:px-10 md:pb-24 lg:px-20">
-        <div className="mx-auto max-w-[900px]">
-          <h2 className="font-condensed text-[36px] font-bold text-cream min-[390px]:text-5xl md:text-7xl">Want to see more?</h2>
-          <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
-            <Button variant="pill-coral" size="pill-md" onClick={() => navigate('/projects')}>View all work</Button>
-            <Button asChild variant="pill-ghost" size="pill-md">
-              <a href="mailto:kristin@kristin-burton.com">Contact me</a>
-            </Button>
-          </div>
-        </div>
-      </section>
+      <WantToSeeMore />
     </div>
   )
 }

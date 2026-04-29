@@ -1,8 +1,7 @@
-import { useNavigate } from 'react-router-dom'
 import { Navbar } from '@/components/Navbar'
 import { CaseStudyBack } from '@/components/CaseStudyBack'
-import { Button } from '@/components/ui/button'
 import { ParallaxGallery } from '@/components/ParallaxGallery'
+import { WantToSeeMore } from '@/components/WantToSeeMore'
 import life360Landing from '@/assets/Life360-CaseStudy-Top-Landing.png'
 import life360Interior from '@/assets/Life360-CaseStudy-Top-Interior.png'
 import life360DesktopTop from '@/assets/Life360-CaseStudy-Grid-Desktop-One.png'
@@ -11,7 +10,6 @@ import life360MobileTop from '@/assets/Life360-CaseStudy-Grid-Mobile-One.png'
 import life360MobileBottom from '@/assets/Life360-CaseStudy-Grid-Mobile-Two.png'
 
 export function Life360CaseStudy() {
-  const navigate = useNavigate()
   const overviewCards = [
     { id: 'overview-left', src: life360Landing, alt: 'Life360 help center landing page' },
     { id: 'overview-right', src: life360Interior, alt: 'Life360 interior category page' },
@@ -126,17 +124,7 @@ export function Life360CaseStudy() {
         phone={life360MobileTop}
       />
 
-      <section id="life360-cta" className="px-4 pb-20 pt-8 text-center sm:px-6 md:px-10 md:pb-24 lg:px-20">
-        <div className="mx-auto max-w-[900px]">
-          <h2 className="font-condensed text-[36px] font-bold text-cream min-[390px]:text-5xl md:text-7xl">Want to see more?</h2>
-          <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
-            <Button variant="pill-coral" size="pill-md" onClick={() => navigate('/projects')}>View all work</Button>
-            <Button asChild variant="pill-ghost" size="pill-md">
-              <a href="mailto:kristin@kristin-burton.com">Contact me</a>
-            </Button>
-          </div>
-        </div>
-      </section>
+      <WantToSeeMore />
     </div>
   )
 }

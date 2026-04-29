@@ -1,7 +1,6 @@
-import { useNavigate } from 'react-router-dom'
 import { Navbar } from '@/components/Navbar'
-import { Button } from '@/components/ui/button'
 import { ParallaxGallery } from '@/components/ParallaxGallery'
+import { WantToSeeMore } from '@/components/WantToSeeMore'
 import adoptaLanding from '@/assets/Adoptapet-CaseStudy-Top-Landing.png'
 import adoptaInterior from '@/assets/Adoptapet-CaseStudy-Top-Interior.png'
 import adoptaDesktopTop from '@/assets/Adoptapet-CaseStudy-Grid-Desktop-One.png'
@@ -9,8 +8,7 @@ import adoptaDesktopBottom from '@/assets/Adoptapet-CaseStudy-Grid-Desktop-Two.p
 import adoptaMobileTop from '@/assets/Adoptapet-CaseStudy-Grid-Mobile-One.png'
 import adoptaMobileBottom from '@/assets/Adoptapet-CaseStudy-Grid-Mobile-Two.png'
 
-export function AdoptaPetCaseStudy() {
-  const navigate = useNavigate()
+export function AdoptapetCaseStudy() {
   const overviewCards = [
     { id: 'overview-left', src: adoptaLanding, alt: 'Adopt-a-Pet help center landing page' },
     { id: 'overview-right', src: adoptaInterior, alt: 'Adopt-a-Pet interior page' },
@@ -122,17 +120,7 @@ export function AdoptaPetCaseStudy() {
         phone={adoptaMobileTop}
       />
 
-      <section id="adopta-cta" className="px-4 pb-20 pt-8 text-center sm:px-6 md:px-10 md:pb-24 lg:px-20">
-        <div className="mx-auto max-w-[900px]">
-          <h2 className="font-condensed text-[36px] font-bold text-cream min-[390px]:text-5xl md:text-7xl">Want to see more?</h2>
-          <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
-            <Button variant="pill-coral" size="pill-md" onClick={() => navigate('/projects')}>View all work</Button>
-            <Button asChild variant="pill-ghost" size="pill-md">
-              <a href="mailto:kristin@kristin-burton.com">Contact me</a>
-            </Button>
-          </div>
-        </div>
-      </section>
+      <WantToSeeMore />
     </div>
   )
 }

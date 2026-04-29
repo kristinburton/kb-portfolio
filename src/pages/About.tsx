@@ -39,8 +39,8 @@ const hobbies = [
 
 const stats = [
   { value: '14+', label: 'Years experience' },
-  { value: '50+', label: 'Projects delivered' },
-  { value: '50+', label: 'Happy clients' },
+  { value: '150+', label: 'Projects delivered' },
+  { value: '145+', label: 'Happy clients' },
 ]
 
 function PhotoBox({ src, alt, label }: { src?: string; alt?: string; label: string }) {
@@ -91,7 +91,6 @@ export function About() {
               <h1 className="about__headline-name font-condensed font-bold text-cream">
                 Kristin <em className="font-sans italic text-coral">Burton.</em>
               </h1>
-              <div className="mt-3 h-[3px] w-16 rounded-full bg-coral" />
               <p className="mt-5 text-[1.05rem] leading-[1.6] text-cream-muted italic">
                 Design-driven development, based in California. I build branded help centers,
                 marketing sites, and web apps where every detail earns its place.
@@ -163,7 +162,7 @@ export function About() {
       </div>
 
       {/* ── OUTSIDE OF WORK ── */}
-      <section className="about__section border-t border-hairline bg-plum-deep">
+      <section className="about__section border-t border-hairline">
         <div ref={hobbyRef} className={`about__grid reveal${hobbyVisible ? ' is-visible' : ''}`}>
 
           {/* Left — outdoor photo */}

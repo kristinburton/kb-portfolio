@@ -1,8 +1,7 @@
-import { useNavigate } from 'react-router-dom'
 import { Navbar } from '@/components/Navbar'
 import { CaseStudyBack } from '@/components/CaseStudyBack'
-import { Button } from '@/components/ui/button'
 import { ParallaxGallery } from '@/components/ParallaxGallery'
+import { WantToSeeMore } from '@/components/WantToSeeMore'
 import dashboardLanding from '@/assets/Dashboard-CaseStudy-Top-Landing.png'
 import dashboardInterior from '@/assets/Dashboard-CaseStudy-Top-Interior.png'
 import dashboardDesktopTop from '@/assets/Dashboard-CaseStudy-Grid-Desktop-One.png'
@@ -10,8 +9,7 @@ import dashboardDesktopBottom from '@/assets/Dashboard-CaseStudy-Grid-Desktop-Tw
 import dashboardMobileTop from '@/assets/Dashboard-CaseStudy-Grid-Mobile-One.png'
 import dashboardMobileBottom from '@/assets/Dashboard--CaseStudy-Grid-Mobile-Two.png'
 
-export function FedlogicCaseStudy() {
-  const navigate = useNavigate()
+export function DashboardCaseStudy() {
   const overviewCards = [
     { id: 'overview-left', src: dashboardLanding, alt: 'Dashboard version 1 — initial design' },
     { id: 'overview-right', src: dashboardInterior, alt: 'Dashboard version 2 — final design' },
@@ -38,7 +36,7 @@ export function FedlogicCaseStudy() {
     <div className="min-h-screen bg-plum pt-16 font-sans text-cream">
       <Navbar />
       <CaseStudyBack />
-      <header id="fedlogic-hero" className="px-4 pb-12 pt-16 text-center sm:px-6 sm:pt-20 md:px-10 md:pb-16 md:pt-28 lg:px-20">
+      <header id="dashboard-hero" className="px-4 pb-12 pt-16 text-center sm:px-6 sm:pt-20 md:px-10 md:pb-16 md:pt-28 lg:px-20">
         <div className="mx-auto max-w-[1100px]">
           <h1 className="font-condensed text-[34px] font-bold leading-tight tracking-[-0.01em] text-cream min-[390px]:text-[40px] md:text-[56px] lg:text-[64px]">
             Reporting Dashboard Design & Development
@@ -46,7 +44,7 @@ export function FedlogicCaseStudy() {
         </div>
       </header>
 
-      <section id="fedlogic-meta" className="border-y border-hairline px-4 py-7 sm:px-6 md:px-10 md:py-8 lg:px-20">
+      <section id="dashboard-meta" className="border-y border-hairline px-4 py-7 sm:px-6 md:px-10 md:py-8 lg:px-20">
         <div className="mx-auto flex max-w-[1280px] flex-wrap items-center justify-center">
           {[
             { label: 'Role', value: 'Lead Designer & Developer' },
@@ -64,8 +62,8 @@ export function FedlogicCaseStudy() {
         </div>
       </section>
 
-      <main id="fedlogic-content" className="px-4 pb-16 pt-10 sm:px-6 sm:pt-12 md:px-10 md:pb-20 md:pt-14 lg:px-20">
-        <section id="fedlogic-overview" className="mx-auto max-w-[1280px]">
+      <main id="dashboard-content" className="px-4 pb-16 pt-10 sm:px-6 sm:pt-12 md:px-10 md:pb-20 md:pt-14 lg:px-20">
+        <section id="dashboard-overview" className="mx-auto max-w-[1280px]">
           <h2 className="text-center font-condensed text-[34px] font-bold text-cream min-[390px]:text-[40px] md:text-[44px]">Overview</h2>
           <p className="mx-auto mt-4 max-w-4xl text-center text-[14px] leading-6 text-cream-muted min-[390px]:text-sm sm:mt-5 sm:leading-7 md:text-base md:leading-8">
             Built a fully functional reporting dashboard for a federal benefits navigation platform,
@@ -89,7 +87,7 @@ export function FedlogicCaseStudy() {
           </div>
         </section>
 
-        <section id="fedlogic-solution" className="mx-auto mt-16 max-w-[1280px] sm:mt-20 md:mt-24">
+        <section id="dashboard-solution" className="mx-auto mt-16 max-w-[1280px] sm:mt-20 md:mt-24">
           <h2 className="text-center font-condensed text-[34px] font-bold text-cream min-[390px]:text-[40px] md:text-[44px]">Building the Solution</h2>
           <p className="mx-auto mt-4 max-w-3xl text-center text-[14px] leading-6 text-cream-muted min-[390px]:text-sm sm:mt-5 sm:leading-7 md:text-base md:leading-8">
             I prioritized a clear information hierarchy for quick scanning, minimal external libraries
@@ -127,17 +125,7 @@ export function FedlogicCaseStudy() {
         phone={dashboardMobileTop}
       />
 
-      <section id="fedlogic-cta" className="px-4 pb-20 pt-8 text-center sm:px-6 md:px-10 md:pb-24 lg:px-20">
-        <div className="mx-auto max-w-[900px]">
-          <h2 className="font-condensed text-[36px] font-bold text-cream min-[390px]:text-5xl md:text-7xl">Want to see more?</h2>
-          <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
-            <Button variant="pill-coral" size="pill-md" onClick={() => navigate('/projects')}>View all work</Button>
-            <Button asChild variant="pill-ghost" size="pill-md">
-              <a href="mailto:kristin@kristin-burton.com">Contact me</a>
-            </Button>
-          </div>
-        </div>
-      </section>
+      <WantToSeeMore />
     </div>
   )
 }

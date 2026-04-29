@@ -15,7 +15,7 @@ export function Footer() {
   const navigate = useNavigate()
 
   return (
-    <footer className="bg-brand-footer-dark border-t border-white/[0.08] px-6 sm:px-10 py-5 flex flex-wrap items-center justify-between gap-4">
+    <footer className="bg-brand-footer-dark bg-plum border-t border-white/[0.08] px-6 sm:px-10 py-5 flex flex-wrap items-center justify-between gap-4">
       <div className="flex items-center gap-6">
         <button
           onClick={() => navigate('/')}

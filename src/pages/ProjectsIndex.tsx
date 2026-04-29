@@ -9,7 +9,7 @@
 import { useState } from 'react'
 import { motion } from 'motion/react'
 import { caseStudies } from '@/data/caseStudies'
-import { ProjectsCard } from '@/components/projectsCard'
+import { ProjectsCard } from '@/components/ProjectsCard'
 import { WorkTogetherCTA } from '@/components/WorkTogetherCTA'
 
 // ── Logo imports (for marquee) ──
@@ -34,17 +34,21 @@ import logoAirstream    from '@/assets/logos/airstream-logo.svg'
 
 
 // ── Cover images (from /assets) ──
-import life360Mobile from '@/assets/life360-mobile-home.png'
-import marquisMobile from '@/assets/marquis-mobile-home.png'
+import life360Mobile from '@/assets/Life360-mobile-home.png'
+import marquisMobile from '@/assets/Marquis-mobile-home.png'
+import adoptapetMobile from '@/assets/Adoptapet-mobile-home.png'
+import MEFMobile from '@/assets/MEF-mobile-home.png'
+import DashboardMobile from '@/assets/Dashboard-mobile-home.png'
+import portfolioMobile from '@/assets/Portfolio-mobile-home.png'
 
 // Per-card art direction — cover image, brand bg, logo
 const cardArt: Record<string, { cover?: string; coverBg: string; logo?: string }> = {
   life360:   { cover: life360Mobile, coverBg: 'linear-gradient(135deg, #c4b5f7, #9b85e8)' },
   marquis:   { cover: marquisMobile, coverBg: 'linear-gradient(135deg, #4a1a6e, #2a0050)' },
-  stpaul:    { coverBg: 'linear-gradient(135deg, #6dccc8, #3da098)' },
-  mef:       { coverBg: 'linear-gradient(135deg, #c9a55c, #8a6f33)' },
-  dashboard:  { coverBg: 'linear-gradient(135deg, #4a3a6e, #2a1f50)'},
-  portfolio: { coverBg: 'linear-gradient(135deg, #5a8a8a, #2f5757)' },
+  adoptapet:    { cover: adoptapetMobile, coverBg: 'linear-gradient(135deg, #6dccc8, #3da098)' },
+  mef:       { cover: MEFMobile, coverBg: 'linear-gradient(135deg, #c9a55c, #DBB065)' },
+  dashboard:  { cover: DashboardMobile, coverBg: 'linear-gradient(135deg, #A3BECC, #3F5768)'},
+  portfolio: {cover: portfolioMobile,  coverBg: 'linear-gradient(135deg, #BC4230, #733864)' },
 }
 
 const marqueeLogos = [
@@ -94,7 +98,7 @@ export function PortfolioIndex() {
           <h1 className="portfolio-hero__title font-condensed font-bold text-cream leading-none tracking-[-0.02em] mb-0">
             Featured <em className="font-sans italic text-coral">projects</em>
           </h1>
-          <p className="portfolio-hero__dek mt-6 text-cream-muted max-w-[400px] mx-auto leading-[1.6]">
+          <p className="portfolio-hero__dek mt-6 text-cream-muted max-w-[500px] mx-auto leading-[1.6]">
             Design and development projects — from help center redesigns to custom-built sites.
           </p>
         </motion.div>

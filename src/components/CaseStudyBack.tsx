@@ -8,7 +8,7 @@ export function CaseStudyBack() {
         className="inline-flex items-center gap-1.5 text-[12px] font-medium uppercase tracking-[0.1em] text-cream-subtle transition-colors hover:text-cream"
       >
         <span className="material-symbols-rounded text-[16px]" aria-hidden="true">arrow_back</span>
-        Portfolio
+        Projects
       </Link>
     </div>
   )

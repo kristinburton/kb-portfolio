@@ -11,7 +11,7 @@ export function WorkTogetherCTA() {
       </p>
       <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
         <Button variant="pill-coral" size="pill-lg" asChild>
-          <a href="mailto:hello@kristin-burton.com">Contact me</a>
+          <a href="mailto:kristin@kristin-burton.com">Contact me</a>
         </Button>
         <Button variant="pill-ghost" size="pill-lg" asChild>
           <a href="https://www.linkedin.com/in/kristinburton/" target="_blank" rel="noreferrer">

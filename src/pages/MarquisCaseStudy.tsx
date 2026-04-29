@@ -1,17 +1,17 @@
-import { useNavigate } from 'react-router-dom'
 import { Navbar } from '@/components/Navbar'
 import { CaseStudyBack } from '@/components/CaseStudyBack'
-import { Button } from '@/components/ui/button'
 import { ParallaxGallery } from '@/components/ParallaxGallery'
+import { WantToSeeMore } from '@/components/WantToSeeMore'
 import marquisProject from '@/assets/Marquis-CaseStudy-Top-Landing.png'
 import marquisInterior from '@/assets/Marquis-CaseStudy-Top-Interior.png'
 import marquisDesktopTop from '@/assets/Marquis-CaseStudy-Grid-Desktop-One.png'
 import marquisDesktopBottom from '@/assets/Marquis-CaseStudy-Grid-Desktop-Two.png'
 import marquisMobileTop from '@/assets/Marquis-CaseStudy-Grid-Mobile-One.png'
 import marquisMobileBottom from '@/assets/Marquis-CaseStudy-Grid-Mobile-Two.png'
+import { Button } from '@/components/ui/button'
 
 export function MarquisCaseStudy() {
-  const navigate = useNavigate()
+
   const overviewCards = [
     { id: 'overview-left', src: marquisProject, alt: 'Marquis help center landing page' },
     { id: 'overview-right', src: marquisInterior, alt: 'Marquis interior page' },
@@ -40,11 +40,11 @@ export function MarquisCaseStudy() {
       <CaseStudyBack />
       <header id="marquis-hero" className="px-4 pb-12 pt-16 text-center sm:px-6 sm:pt-20 md:px-10 md:pb-16 md:pt-28 lg:px-20">
         <div className="mx-auto max-w-[1100px]">
-          <h1 className="font-condensed text-[34px] font-bold leading-tight tracking-[-0.01em] text-cream min-[390px]:text-[40px] md:text-[56px] lg:text-[64px]">
+          <h1 className="portfolio-hero__title font-condensed font-bold text-cream leading-none tracking-[-0.02em] mb-0">
             Marquis Envoy Project
           </h1>
           <div className="mt-5 sm:mt-6">
-            <Button asChild variant="pill-coral" size="pill-sm">
+            <Button asChild variant="pill-coral" size="pill-lg">
               <a href="https://help.gomarquis.com/hc/en-us" target="_blank" rel="noreferrer">See it in the wild</a>
             </Button>
           </div>
@@ -130,17 +130,7 @@ export function MarquisCaseStudy() {
         phone={marquisMobileTop}
       />
 
-      <section id="marquis-cta" className="px-4 pb-20 pt-8 text-center sm:px-6 md:px-10 md:pb-24 lg:px-20">
-        <div className="mx-auto max-w-[900px]">
-          <h2 className="font-condensed text-[36px] font-bold text-cream min-[390px]:text-5xl md:text-7xl">Want to see more?</h2>
-          <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
-            <Button variant="pill-coral" size="pill-md" onClick={() => navigate('/projects')}>View all work</Button>
-            <Button asChild variant="pill-ghost" size="pill-md">
-              <a href="mailto:hello@kristin-burton.com">Contact me</a>
-            </Button>
-          </div>
-        </div>
-      </section>
+      <WantToSeeMore />
     </div>
   )
 }

@@ -4,9 +4,9 @@ import { Button } from '@/components/ui/button'
 import { useNavigate } from 'react-router-dom'
 import { SectionTitle } from '@/components/SectionTitle'
 import { WorkTogetherCTA } from '@/components/WorkTogetherCTA'
-import life360MobileHome from '@/assets/life360-mobile-home.png'
-import marquisMobileHome from '@/assets/marquis-mobile-home.png'
-import adoptAPetMobileHome from '@/assets/adopt-a-pet-mobile-home.png'
+import life360MobileHome from '@/assets/Life360-mobile-home.png'
+import marquisMobileHome from '@/assets/Marquis-mobile-home.png'
+import adoptAPetMobileHome from '@/assets/Adoptapet-mobile-home.png'
 
 
 type HomeFeaturedProject = {

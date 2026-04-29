@@ -28,9 +28,6 @@ Open [http://localhost:5173](http://localhost:5173)
 ```
 src/
 ├── components/
-│   ├── layouts/
-│   │   ├── HeroSplitLayout.tsx   ← Used by: St. Paul, Marquis, Life360, Adopt a Pet, MEF
-│   │   └── BentoGridLayout.tsx   ← Used by: FedLogic Dashboard
 │   ├── ui/
 │   │   ├── button.tsx            ← shadcn Button
 │   │   └── badge.tsx             ← shadcn Badge

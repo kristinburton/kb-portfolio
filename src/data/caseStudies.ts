@@ -22,11 +22,11 @@ import mefFaqs          from '@/assets/MEF-CaseStudy-Grid-Desktop-Two.png'
 import mefMobileLanding from '@/assets/MEF-CaseStudy-Grid-Mobile-One.png'
 import mefSlidedeck     from '@/assets/MEF-CaseStudy-Grid-Mobile-Two.png'
 
-// FedLogic Dashboard
-import fedlogicV1 from '@/assets/Dashboard-CaseStudy-Top-Landing.png'
-import fedlogicV2 from '@/assets/Dashboard-CaseStudy-Top-Interior.png'
-import fedlogicV3 from '@/assets/Dashboard-CaseStudy-Grid-Desktop-One.png'
-import fedlogicV4 from '@/assets/Dashboard-CaseStudy-Grid-Desktop-Two.png'
+//  Dashboard
+import dashboardV1 from '@/assets/Dashboard-CaseStudy-Top-Landing.png'
+import dashboardV2 from '@/assets/Dashboard-CaseStudy-Top-Interior.png'
+import dashboardV3 from '@/assets/Dashboard-CaseStudy-Grid-Desktop-One.png'
+import dashboardV4 from '@/assets/Dashboard-CaseStudy-Grid-Desktop-Two.png'
 
 // Portfolio redesign — before (add screenshots when ready)
 // import oldPortfolioHome    from '@/assets/old-portfolio-home.png'
@@ -112,11 +112,11 @@ export type CaseStudy = HeroSplitCaseStudy | BentoCaseStudy | BeforeAfterCaseStu
 
 export const caseStudies: CaseStudy[] = [
 
-  // ── ST PAUL ──────────────────────────────────────────────────────────────
+  // ── ADOPT A PET ──────────────────────────────────────────────────────────────
   {
-    id: 'stpaul',
-    slug: 'stpaul-help-center-design',
-    client: 'City of St. Paul · Envoy Project',
+    id: 'adoptapet',
+    slug: 'adoptapet-help-center-design',
+    client: 'Adopt a Pet · Envoy Project',
     title: 'Zendesk Help Center Redesign',
     subtitle: 'Comprehensive redesign of the city\'s Zendesk help center, focusing on customer-facing content and enhanced user experience.',
     layout: 'hero-split',
@@ -146,8 +146,8 @@ export const caseStudies: CaseStudy[] = [
   {
     id: 'marquis',
     slug: 'marquis-help-center-design',
-    client: 'Marquis · Property Management',
-    title: 'Help Center Design & Community Platform',
+    client: 'Marquis · Digital Marketing and Compliance Solutions for Banks and Credit Unions',
+    title: 'Marquis Help Center & Community',
     subtitle: 'Designed and coded a branded, user-friendly Zendesk help center to enhance client engagement and internal efficiency.',
     layout: 'hero-split',
     role: 'Lead Designer & Developer',
@@ -242,10 +242,10 @@ export const caseStudies: CaseStudy[] = [
     ],
   },
 
-  // ── FEDLOGIC ─────────────────────────────────────────────────────────────
+  // ── Dashboard ─────────────────────────────────────────────────────────────
   {
-    id: 'fedlogic',
-    slug: 'fedlogic-dashboard-design',
+    id: 'dashboard',
+    slug: 'dashboard-design',
     client: 'Internal Project · Client Reporting Dashboard',
     title: 'Reporting Dashboard Design & Development',
     subtitle: 'Designed and built a fully functional benefits reporting dashboard from scratch — two versions, print-perfect PDF export, and a tight delivery timeline.',
@@ -266,7 +266,7 @@ export const caseStudies: CaseStudy[] = [
         stat: '2', statLabel: 'Dashboard versions', accent: true,
       },
       {
-        label: 'Version 1 → Final', heading: 'Design Evolution', body: '', screen: { label: 'Initial concept', src: fedlogicV1 }, wide: true,
+        label: 'Version 1 → Final', heading: 'Design Evolution', body: '', screen: { label: 'Initial concept', src: dashboardV1 }, wide: true,
       },
       {
         label: 'Design Decisions', heading: 'What I Prioritized',
@@ -278,17 +278,17 @@ export const caseStudies: CaseStudy[] = [
         tags: ['Custom Print CSS', 'PDF Export', 'Cross-browser'],
       },
       {
-        label: 'Dashboard One', heading: 'Browser View', body: '', screen: { label: 'Dashboard One — browser', src: fedlogicV2 },
+        label: 'Dashboard One', heading: 'Browser View', body: '', screen: { label: 'Dashboard One — browser', src: dashboardV2 },
       },
       {
         label: 'Color Evolution', heading: 'Client Feedback Loop', wide: true,
         body: 'My initial delivery used a single blue palette — clean, data-forward, intentional. After client review, they requested additional color differentiation across chart segments to improve at-a-glance readability. I introduced a controlled multi-color system that maintained the professional tone while meeting their usability needs.',
       },
       {
-        label: 'Dashboard Two', heading: 'Multi-color Version', body: '', screen: { label: 'Dashboard Two — added color', src: fedlogicV3 },
+        label: 'Dashboard Two', heading: 'Multi-color Version', body: '', screen: { label: 'Dashboard Two — added color', src: dashboardV3 },
       },
       {
-        label: 'PDF Output', heading: 'Print CSS Result', body: '', screen: { label: 'Dashboard — PDF version', src: fedlogicV4 },
+        label: 'PDF Output', heading: 'Print CSS Result', body: '', screen: { label: 'Dashboard — PDF version', src: dashboardV4 },
       },
     ],
   },
@@ -298,7 +298,7 @@ export const caseStudies: CaseStudy[] = [
     id: 'portfolio',
     slug: 'portfolio-redesign',
     client: 'Kristin Burton · Personal Brand',
-    title: 'Portfolio Redesign',
+    title: 'Portfolio Redesign Before & After',
     subtitle: 'From a static Webflow site to a dynamic, animated React application — rebuilding my portfolio with custom case study layouts, brand animations, and a scalable component system.',
     layout: 'before-after',
     role: 'Designer & Developer',
