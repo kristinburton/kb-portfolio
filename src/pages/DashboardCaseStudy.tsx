@@ -1,8 +1,8 @@
 import { Helmet } from 'react-helmet-async'
 import { Navbar } from '@/components/Navbar'
 import { CaseStudyBack } from '@/components/CaseStudyBack'
-// import { ParallaxGallery } from '@/components/ParallaxGallery'
 import { WantToSeeMore } from '@/components/WantToSeeMore'
+import { Button } from '@/components/ui/button'
 import dashboardOne from '@/assets/Dashboard-One-Reporting.png'
 import dashboardTwo from '@/assets/Dashboard-Two-Reporting.png'
 import dashboardThree from '@/assets/Dashboard-Three-Reporting.png'
@@ -58,6 +58,13 @@ export function DashboardCaseStudy() {
           <h2 className="text-center font-condensed text-[34px] font-bold text-cream min-[390px]:text-[40px] md:text-[44px]">Overview</h2>
           <p className="mx-auto mt-4 max-w-4xl text-center text-[14px] leading-6  min-[390px]:text-sm sm:mt-5 sm:leading-7 md:text-base md:leading-8">
             Designed and built a suite of data reporting dashboards for a federal benefits navigation platform, taking the project from Figma mockups to fully coded, API-integrated dashboards with print-to-PDF export. The structure, layout, and data visualization were approved on the first pass with one change requested: an expanded color palette.          </p>
+          <div className="mt-8 flex items-start gap-3 rounded-lg border border-hairline bg-surf-1 px-5 py-4 text-left">
+            <span className="material-symbols-rounded mt-0.5 shrink-0 text-[18px] text-sand">lock</span>
+            <p className="text-[13px] leading-6 text-sand md:text-sm">
+              <span className="font-semibold text-cream">Content anonymized for client confidentiality.</span>{' '}
+              All data, names, and identifying information shown in these screenshots have been replaced with placeholder values. The design, layout, and component structure are real.
+            </p>
+          </div>
           <div className="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-3 sm:gap-4 md:gap-5">
             <div className="group/img1 h-[250px] sm:h-[320px] md:h-[624px] lg:h-[824px] overflow-hidden rounded-[2px] border border-hairline">
               <img
@@ -83,6 +90,13 @@ export function DashboardCaseStudy() {
                 loading="lazy"
               />
             </div>
+          </div>
+          <div className="mt-8 flex justify-center">
+            <Button variant="pill-ghost" size="pill-lg" asChild>
+              <a href="/downloads/Dashboard-Three%20Reporting-Print.pdf" target="_blank" rel="noreferrer">
+                View print report
+              </a>
+            </Button>
           </div>
         </section>
 
