@@ -111,7 +111,7 @@ export function Home() {
           </motion.div>
         </div>
         <motion.div
-          className={heroScrolled ? 'absolute bottom-8 left-1/2 -translate-x-1/2' : 'fixed bottom-8 left-1/2 -translate-x-1/2 z-50'}
+          className={heroScrolled ? 'hidden sm:block absolute bottom-8 left-1/2 -translate-x-1/2' : 'hidden sm:block fixed bottom-8 left-1/2 -translate-x-1/2 z-50'}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.56 }}
