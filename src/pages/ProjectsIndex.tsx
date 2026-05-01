@@ -70,7 +70,7 @@ function ClientMarquee() {
   return (
     <div className="bg-black/20 border-y border-white/[0.06] py-14">
       <h3 className="text-center font-condensed font-bold text-2xl text-cream mb-8 tracking-tight">
-        More Clients I've Worked With
+        More clients I've worked with
       </h3>
       <div
         className="relative w-full overflow-hidden"
