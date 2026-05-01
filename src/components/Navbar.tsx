@@ -5,7 +5,7 @@ const navLinks = [
   { label: 'Home',     path: '/',                                    external: false },
   { label: 'Projects', path: '/projects',                            external: false },
   { label: 'About',    path: '/about',                               external: false },
-  { label: 'Resume',   path: '/downloads/Kristin-Burton-Resume.pdf', external: false },
+  { label: 'Resume',   path: '/downloads/Kristin-Burton-Resume.pdf', external: true  },
   { label: 'Contact',  path: 'mailto:kristin@kristin-burton.com',    external: true  },
 ]
 
@@ -35,7 +35,11 @@ export function Navbar() {
   const handleNav = (path: string, external: boolean) => {
     setIsOpen(false)
     if (external) {
-      window.location.href = path
+      if (path.startsWith('mailto:')) {
+        window.location.href = path
+      } else {
+        window.open(path, '_blank', 'noopener,noreferrer')
+      }
     } else {
       navigate(path)
     }

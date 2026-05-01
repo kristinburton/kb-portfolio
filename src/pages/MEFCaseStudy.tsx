@@ -166,19 +166,19 @@ export function MEFCaseStudy() {
                   loading="lazy"
                 />
               </div>
-              <div className="group/img3 col-span-1 h-[250px] sm:h-[320px] md:h-[624px] lg:h-[824px] overflow-hidden rounded-[2px] border border-hairline md:col-start-3 md:col-end-4 md:row-start-1 md:row-end-3">
+              <div className="group/img3 col-span-1 h-[250px] sm:h-[320px] md:h-[620px] lg:h-[820px] overflow-hidden rounded-[2px] border border-hairline md:col-start-3 md:col-end-4 md:row-start-1 md:row-end-3">
                 <img
                   src={mefMobileTop}
                   alt="MEF live auction previews page"
-                  className="w-full transition-transform duration-[2500ms] linear group-hover/img3:-translate-y-[calc(100%_-_250px)] sm:group-hover/img3:-translate-y-[calc(100%_-_320px)] md:group-hover/img3:-translate-y-[calc(100%_-_624px)] lg:group-hover/img3:-translate-y-[calc(100%_-_824px)] object-cover object-top"
+                  className="w-full transition-transform duration-[2500ms] linear group-hover/img3:-translate-y-[calc(100%_-_250px)] sm:group-hover/img3:-translate-y-[calc(100%_-_320px)] md:group-hover/img3:-translate-y-[calc(100%_-_620px)] lg:group-hover/img3:-translate-y-[calc(100%_-_820px)] object-cover object-top"
                   loading="lazy"
                 />
               </div>
-              <div className="group/img4 col-span-1 h-[250px] sm:h-[320px] md:h-[624px] lg:h-[824px] overflow-hidden rounded-[2px] border border-hairline md:col-start-4 md:col-end-5 md:row-start-1 md:row-end-3">
+              <div className="group/img4 col-span-1 h-[250px] sm:h-[320px] md:h-[620px] lg:h-[820px] overflow-hidden rounded-[2px] border border-hairline md:col-start-4 md:col-end-5 md:row-start-1 md:row-end-3">
                 <img
                   src={mefMobileBottom}
                   alt="MEF FAQ page"
-                  className="w-full transition-transform duration-[2500ms] linear group-hover/img4:-translate-y-[calc(100%_-_250px)] sm:group-hover/img4:-translate-y-[calc(100%_-_320px)] md:group-hover/img4:-translate-y-[calc(100%_-_624px)] lg:group-hover/img4:-translate-y-[calc(100%_-_824px)] object-cover object-top"
+                  className="w-full transition-transform duration-[2500ms] linear group-hover/img4:-translate-y-[calc(100%_-_250px)] sm:group-hover/img4:-translate-y-[calc(100%_-_320px)] md:group-hover/img4:-translate-y-[calc(100%_-_620px)] lg:group-hover/img4:-translate-y-[calc(100%_-_820px)] object-cover object-top"
                   loading="lazy"
                 />
               </div>

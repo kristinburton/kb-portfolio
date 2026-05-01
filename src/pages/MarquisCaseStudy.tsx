@@ -149,38 +149,38 @@ export function MarquisCaseStudy() {
             </div>
             <div className="mt-10 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4 md:gap-5">
               {/* Desktop image 1: full width on mobile / left half row 1 on md+ */}
-              <div className="group/img1 col-span-2 h-[160px] sm:h-[220px] md:h-[300px] lg:h-[400px] overflow-hidden rounded-[2px] border border-hairline md:col-start-1 md:col-end-3 md:row-start-1">
+              <div className="group/img1 col-span-2 h-[160px] sm:h-[220px] md:h-[300px] lg:h-[402px] overflow-hidden rounded-[2px] border border-hairline md:col-start-1 md:col-end-3 md:row-start-1">
                 <img
                   src={marquisDesktopTop}
                   alt="Marquis help center landing page"
-                  className="w-full transition-transform duration-[2500ms] linear group-hover/img1:-translate-y-[calc(100%_-_160px)] sm:group-hover/img1:-translate-y-[calc(100%_-_220px)] md:group-hover/img1:-translate-y-[calc(100%_-_300px)] lg:group-hover/img1:-translate-y-[calc(100%_-_400px)] object-cover object-top"
+                  className="w-full transition-transform duration-[2500ms] linear group-hover/img1:-translate-y-[calc(100%_-_160px)] sm:group-hover/img1:-translate-y-[calc(100%_-_220px)] md:group-hover/img1:-translate-y-[calc(100%_-_300px)] lg:group-hover/img1:-translate-y-[calc(100%_-_402px)] object-cover object-top"
                   loading="lazy"
                 />
               </div>
               {/* Desktop image 2: full width on mobile / left half row 2 on md+ */}
-              <div className="group/img2 col-span-2 h-[160px] sm:h-[220px] md:h-[300px] lg:h-[400px] overflow-hidden rounded-[2px] border border-hairline md:col-start-1 md:col-end-3 md:row-start-2">
+              <div className="group/img2 col-span-2 h-[160px] sm:h-[220px] md:h-[300px] lg:h-[402px] overflow-hidden rounded-[2px] border border-hairline md:col-start-1 md:col-end-3 md:row-start-2">
                 <img
                   src={marquisDesktopBottom}
                   alt="Marquis community topics layout"
-                  className="w-full transition-transform duration-[2500ms] linear group-hover/img2:-translate-y-[calc(100%_-_160px)] sm:group-hover/img2:-translate-y-[calc(100%_-_220px)] md:group-hover/img2:-translate-y-[calc(100%_-_300px)] lg:group-hover/img2:-translate-y-[calc(100%_-_400px)] object-cover object-top"
+                  className="w-full transition-transform duration-[2500ms] linear group-hover/img2:-translate-y-[calc(100%_-_160px)] sm:group-hover/img2:-translate-y-[calc(100%_-_220px)] md:group-hover/img2:-translate-y-[calc(100%_-_300px)] lg:group-hover/img2:-translate-y-[calc(100%_-_402px)] object-cover object-top"
                   loading="lazy"
                 />
               </div>
               {/* Mobile image 1: half width on mobile / right col spanning rows 1–2 on md+ */}
-              <div className="group/img3 col-span-1 h-[250px] sm:h-[320px] md:h-[624px] lg:h-[824px] overflow-hidden rounded-[2px] border border-hairline md:col-start-3 md:col-end-4 md:row-start-1 md:row-end-3">
+              <div className="group/img3 col-span-1 h-[250px] sm:h-[320px] md:h-[620px] lg:h-[824px] overflow-hidden rounded-[2px] border border-hairline md:col-start-3 md:col-end-4 md:row-start-1 md:row-end-3">
                 <img
                   src={marquisMobileTop}
                   alt="Marquis mobile help center"
-                  className="w-full transition-transform duration-[2500ms] linear group-hover/img3:-translate-y-[calc(100%_-_250px)] sm:group-hover/img3:-translate-y-[calc(100%_-_320px)] md:group-hover/img3:-translate-y-[calc(100%_-_624px)] lg:group-hover/img3:-translate-y-[calc(100%_-_824px)] object-cover object-top"
+                  className="w-full transition-transform duration-[2500ms] linear group-hover/img3:-translate-y-[calc(100%_-_250px)] sm:group-hover/img3:-translate-y-[calc(100%_-_320px)] md:group-hover/img3:-translate-y-[calc(100%_-_620px)] lg:group-hover/img3:-translate-y-[calc(100%_-_824px)] object-cover object-top"
                   loading="lazy"
                 />
               </div>
               {/* Mobile image 2: half width on mobile / rightmost col spanning rows 1–2 on md+ */}
-              <div className="group/img4 col-span-1 h-[250px] sm:h-[320px] md:h-[624px] lg:h-[824px] overflow-hidden rounded-[2px] border border-hairline md:col-start-4 md:col-end-5 md:row-start-1 md:row-end-3">
+              <div className="group/img4 col-span-1 h-[250px] sm:h-[320px] md:h-[620px] lg:h-[824px] overflow-hidden rounded-[2px] border border-hairline md:col-start-4 md:col-end-5 md:row-start-1 md:row-end-3">
                 <img
                   src={marquisMobileBottom}
                   alt="Marquis mobile article experience"
-                  className="w-full transition-transform duration-[2500ms] linear group-hover/img4:-translate-y-[calc(100%_-_250px)] sm:group-hover/img4:-translate-y-[calc(100%_-_320px)] md:group-hover/img4:-translate-y-[calc(100%_-_624px)] lg:group-hover/img4:-translate-y-[calc(100%_-_824px)] object-cover object-top"
+                  className="w-full transition-transform duration-[2500ms] linear group-hover/img4:-translate-y-[calc(100%_-_250px)] sm:group-hover/img4:-translate-y-[calc(100%_-_320px)] md:group-hover/img4:-translate-y-[calc(100%_-_620px)] lg:group-hover/img4:-translate-y-[calc(100%_-_824px)] object-cover object-top"
                   loading="lazy"
                 />
               </div>
