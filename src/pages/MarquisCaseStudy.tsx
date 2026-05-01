@@ -72,7 +72,7 @@ export function MarquisCaseStudy() {
   return (
     <div className="min-h-screen bg-plum pt-16 font-sans text-cream">
       <Helmet>
-        <title>Marquis Help Center — Kristin Burton</title>
+        <title>Marquis help center — Kristin Burton</title>
         <meta name="description" content="Designed and built a fully branded Zendesk help center and community forum for Marquis, serving 700+ banks and credit unions with role-based content and four product domains." />
       </Helmet>
       <Navbar />
@@ -82,7 +82,7 @@ export function MarquisCaseStudy() {
       <header className="px-4 pb-8 pt-16 text-center sm:px-6 sm:pt-20 md:px-10 md:pb-12 md:pt-28 lg:px-20">
         <div className="mx-auto max-w-[900px]">
           <h1 className="font-condensed text-[34px] font-bold leading-tight tracking-[-0.01em] text-cream min-[390px]:text-[40px] md:text-[56px] lg:text-[64px]">
-            Marquis Help Center & Community Platform
+            Marquis help center & community platform
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-[14px] leading-6  min-[390px]:text-sm sm:leading-7 md:text-base md:leading-8">
             Designed and built a fully branded Zendesk help center and community forum for Marquis, a data-driven marketing and compliance platform serving 700+ banks and credit unions.

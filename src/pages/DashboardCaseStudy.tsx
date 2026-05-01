@@ -15,7 +15,7 @@ export function DashboardCaseStudy() {
   return (
     <div className="min-h-screen bg-plum pt-16 font-sans text-cream">
       <Helmet>
-        <title>Reporting Dashboard — Kristin Burton</title>
+        <title>Reporting dashboard — Kristin Burton</title>
         <meta name="description" content="Designed and developed a suite of internal data reporting dashboards for a federal benefits platform — from Figma mockups to fully coded, API-integrated dashboards with print-to-PDF export." />
       </Helmet>
       <Navbar />
@@ -23,7 +23,7 @@ export function DashboardCaseStudy() {
       <header id="dashboard-hero" className="px-4 pb-12 pt-16 text-center sm:px-6 sm:pt-20 md:px-10 md:pb-16 md:pt-28 lg:px-20">
         <div className="mx-auto max-w-[1100px]">
           <h1 className="font-condensed text-[34px] font-bold leading-tight tracking-[-0.01em] text-cream min-[390px]:text-[40px] md:text-[56px] lg:text-[64px]">
-            Internal Reporting Dashboard Design and Development
+            Internal reporting dashboard design and development
           </h1>
         </div>
       </header>

@@ -70,7 +70,7 @@ export function Life360CaseStudy() {
   return (
     <div className="min-h-screen bg-plum pt-16 font-sans text-cream">
       <Helmet>
-        <title>Life360 Help Center Unification — Kristin Burton</title>
+        <title>Life360 help center unification — Kristin Burton</title>
         <meta name="description" content="Led the design of a unified Zendesk help center merging Life360 and Tile after their acquisition — one mobile-first support experience for two brands and two user bases." />
       </Helmet>
       <Navbar />
@@ -80,7 +80,7 @@ export function Life360CaseStudy() {
       <header className="px-4 pb-8 pt-16 text-center sm:px-6 sm:pt-20 md:px-10 md:pb-12 md:pt-28 lg:px-20">
         <div className="mx-auto max-w-[900px]">
           <h1 className="font-condensed text-[34px] font-bold leading-tight tracking-[-0.01em] text-cream min-[390px]:text-[40px] md:text-[56px] lg:text-[64px]">
-            Life360 Help Center Unification
+            Life360 help center unification
 
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-[14px] leading-6  min-[390px]:text-sm sm:leading-7 md:text-base md:leading-8">

@@ -75,7 +75,7 @@ export function PortfolioCaseStudy() {
   return (
     <div className="min-h-screen bg-plum pt-16 font-sans text-cream">
       <Helmet>
-        <title>Portfolio Redesign — Kristin Burton</title>
+        <title>Portfolio redesign — Kristin Burton</title>
         <meta name="description" content="A case study about this very site — from a static HTML/CSS portfolio to a fully routed React app with animated transitions and a draggable before/after comparison." />
       </Helmet>
       <Navbar />
@@ -85,7 +85,7 @@ export function PortfolioCaseStudy() {
       <header className="px-4 pb-8 pt-16 text-center sm:px-6 sm:pt-20 md:px-10 md:pb-12 md:pt-28 lg:px-20">
         <div className="mx-auto max-w-[900px]">
           <h1 className="font-condensed text-[34px] font-bold leading-tight tracking-[-0.01em] text-cream min-[390px]:text-[40px] md:text-[56px] lg:text-[64px]">
-            A Case Study{' '}
+            A case study{' '}
             <em className="font-condensed text-coral not-italic">about this very site.</em>
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-base leading-6">
