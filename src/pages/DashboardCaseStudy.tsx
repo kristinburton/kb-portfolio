@@ -93,7 +93,7 @@ export function DashboardCaseStudy() {
           </div>
           <div className="mt-8 flex justify-center">
             <Button variant="pill-ghost" size="pill-lg" asChild>
-              <a href="/downloads/Dashboard-Three%20Reporting-Print.pdf" target="_blank" rel="noreferrer">
+              <a href="/downloads/Dashboard-Three%20Reporting-Print-Example.pdf" target="_blank" rel="noreferrer">
                 View print report
               </a>
             </Button>
