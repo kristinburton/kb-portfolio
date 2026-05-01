@@ -90,7 +90,7 @@ export function About() {
               <h1 className="about__headline-name font-condensed font-bold text-cream">
                 Kristin <em className="font-sans italic text-coral">Burton.</em>
               </h1>
-              <p className="mt-5 text-[1.05rem] leading-[1.6]  italic">
+              <p className="mt-5 text-[1.05rem] leading-[1.6] text-cream italic">
                 Designer and developer based in Petaluma, California. I build branded help centers, marketing sites, and web apps where every pixel earns its place.
               </p>
             </div>
@@ -116,24 +116,17 @@ export function About() {
         <div className="mx-auto max-w-[760px]">
 
           <SectionTitle size="md">Self-taught, curious, and hooked from day one.</SectionTitle>
-          <p className="mt-5 mb-14 text-[17px] leading-[1.75] ">
+          <p className="mt-5 mb-14 text-[17px] leading-[1.75] text-cream">
             I fell into front-end development at my first job out of college, taught on the job through books, tutorials, Stack Overflow, and a patient manager. I grew a real passion for it fast. There was something addictive about the challenge, watching code come to life on screen, solving problems, finding the best path forward. What I loved most was that it still let me be creative, not just in what I built, but in how I built it.
           </p>
 
-          {/* Pull quote */}
-          {/* <blockquote className="mb-16 border-l-[3px] border-coral pl-7">
-            <p className="font-condensed italic text-[28px] leading-[1.3] tracking-[-0.005em] text-coral-soft">
-              "I know how it is built, and I know how it should feel."
-            </p>
-          </blockquote> */}
-
           <SectionTitle size="md">Empathy is the best design tool.</SectionTitle>
-          <p className="mt-5 mb-14 text-[17px] leading-[1.75] ">
+          <p className="mt-5 mb-14 text-[17px] leading-[1.75] text-cream">
             That appreciation for craft naturally led me to start thinking about the people on the other side of the screen. I became genuinely fascinated by how people navigate the web and apps, what feels intuitive, what causes friction, what paths they take that you never expected. Watching someone else use something I built made me a more thoughtful, empathetic designer and developer.
           </p>
 
           <SectionTitle size="md">AI changed how I build. In the best way.</SectionTitle>
-          <p className="mt-5 text-[17px] leading-[1.75] ">
+          <p className="mt-5 text-[17px] leading-[1.75] text-cream">
             These days I still write code, leaning on AI to move faster and experiment more freely. It has been a fun playground, ideas come to life quicker, and there is more room to explore animations and interactions that would have once eaten up too much dev time. I am constantly pushing myself, learning, and figuring out what works and what really does not.
           </p>
         </div>
@@ -165,7 +158,7 @@ export function About() {
             <h2 className="about__headline-section font-condensed font-bold text-cream">
               Off the clock.
             </h2>
-            <ul className="about__hobby-list">
+            <ul className="about__hobby-list text-cream">
               {hobbies.map(({ icon, text }, i) => {
                 const icons: Record<string, LucideIcon> = { Heart, Wine, Activity, Coffee, Music, Trees, Plane, BookOpen, Sprout }
                 const Icon = icons[icon]
