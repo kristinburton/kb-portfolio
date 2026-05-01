@@ -61,7 +61,7 @@ export function DashboardCaseStudy() {
           <div className="mt-8 flex items-start gap-3 rounded-lg border border-hairline bg-surf-1 px-5 py-4 text-left">
             <span className="material-symbols-rounded mt-0.5 shrink-0 text-[18px] text-sand">lock</span>
             <p className="text-[13px] leading-6 text-sand md:text-sm">
-              <span className="font-semibold text-cream">Content anonymized for client confidentiality.</span>{' '}
+              <span className="font-semibold text-cream">Content anonymized for client confidentiality.</span>{' '}<br/ >
               All data, names, and identifying information shown in these screenshots have been replaced with placeholder values. The design, layout, and component structure are real.
             </p>
           </div>
