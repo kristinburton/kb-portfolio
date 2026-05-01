@@ -80,7 +80,7 @@ export function MEFCaseStudy() {
       <header className="px-4 pb-8 pt-16 text-center sm:px-6 sm:pt-20 md:px-10 md:pb-12 md:pt-28 lg:px-20">
         <div className="mx-auto max-w-[900px]">
           <h1 className="font-condensed text-[34px] font-bold leading-tight tracking-[-0.01em] text-cream min-[390px]:text-[40px] md:text-[56px] lg:text-[64px]">
-            2026 MEF Auction Gala
+            2026 MEF auction gala
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-[14px] leading-6  min-[390px]:text-sm sm:leading-7 md:text-base md:leading-8">
             Full event website + on-site presentation for the Moraga Education Foundation's largest annual fundraiser, a Vegas-meets-Moraga themed gala.
