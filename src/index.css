@@ -82,10 +82,10 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 2.5rem;
-    background: rgba(42, 31, 53, 0.25);
+    /* background: rgba(42, 31, 53, 0.25);
     backdrop-filter: blur(20px) saturate(1.6);
     -webkit-backdrop-filter: blur(20px) saturate(1.6);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); */
     box-sizing: border-box;
     isolation: isolate;
     transition: height 0.3s ease, background 0.3s ease, padding 0.3s ease;
@@ -137,6 +137,81 @@
   }
   .nav-bar.is-scrolled .nav-link {
     font-size: 0.875rem;
+  }
+
+  /* ─── Mobile nav toggle ──────────────────────────────────── */
+  .nav-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: rgba(245, 235, 230, 0.85);
+    cursor: pointer;
+    padding: 4px;
+    line-height: 0;
+    transition: color 0.2s;
+    z-index: 10000;
+    position: relative;
+  }
+  .nav-menu-toggle:hover {
+    color: #f5ebe6;
+  }
+
+  @media (max-width: 767px) {
+    .nav-links {
+      display: none;
+    }
+    .nav-menu-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  /* ─── Mobile fullscreen menu ─────────────────────────────── */
+  .nav-mobile-menu {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9998;
+    background: #2a1f35;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(100%);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  @media (max-width: 767px) {
+    .nav-mobile-menu {
+      display: flex;
+    }
+  }
+  .nav-mobile-menu.is-open {
+    transform: translateX(0);
+  }
+
+  .nav-mobile-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  .nav-mobile-link {
+    background: none;
+    border: none;
+    color: rgba(245, 235, 230, 0.6);
+    font-size: 2.75rem;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 0;
+    letter-spacing: -0.01em;
+    transition: color 0.2s;
+  }
+  .nav-mobile-link:hover {
+    color: #f5ebe6;
+  }
+  .nav-mobile-link.is-active {
+    color: #c85a4a;
   }
 
   /* ─── Hero ───────────────────────────────────────────────── */

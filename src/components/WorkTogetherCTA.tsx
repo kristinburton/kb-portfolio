@@ -6,7 +6,7 @@ export function WorkTogetherCTA() {
       <h2 className="font-condensed text-[56px] font-bold leading-[1.05] tracking-[-0.015em] text-cream">
         Let's Work Together
       </h2>
-      <p className="mx-auto mt-5 max-w-md text-[17px] text-cream-muted">
+      <p className="mx-auto mt-5 max-w-md text-[17px] text-cream">
         Have a project in mind? I'd love to hear about it.
       </p>
       <div className="mt-10 flex flex-wrap items-center justify-center gap-3">

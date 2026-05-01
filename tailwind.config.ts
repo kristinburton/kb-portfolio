@@ -17,6 +17,7 @@ const config: Config = {
         plum: {
           deep:    '#1e1530',
           DEFAULT: '#2a1f35',
+          card:    '#33243D',
           mid:     '#3d2650',
         },
         coral: {
@@ -28,6 +29,7 @@ const config: Config = {
           soft:    '#7eb0b0',
         },
         gold: '#c9a55c',
+        sand: '#d4b896',
         cream: {
           DEFAULT: '#f5ebe6',
           muted:   'rgba(245,235,230,0.72)',

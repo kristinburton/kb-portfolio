@@ -28,7 +28,7 @@ export function SectionHeader({ eyebrow, title, dek, align = 'left', className }
         {title}
       </h2>
       {dek && (
-        <p className="section-header__dek text-base leading-[1.65] text-cream-muted m-0">
+        <p className="section-header__dek text-base leading-[1.65]  m-0">
           {dek}
         </p>
       )}

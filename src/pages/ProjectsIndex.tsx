@@ -98,7 +98,7 @@ export function PortfolioIndex() {
           <h1 className="portfolio-hero__title font-condensed font-bold text-cream leading-none tracking-[-0.02em] mb-0">
             Featured <em className="font-sans italic text-coral">projects</em>
           </h1>
-          <p className="portfolio-hero__dek mt-6 text-cream-muted max-w-[500px] mx-auto leading-[1.6]">
+          <p className="portfolio-hero__dek mt-6 text-cream max-w-[500px] mx-auto leading-[1.6]">
             Design and development projects — from help center redesigns to custom-built sites.
           </p>
         </motion.div>

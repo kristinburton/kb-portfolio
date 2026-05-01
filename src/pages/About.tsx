@@ -3,7 +3,6 @@ import { motion } from 'motion/react'
 import { Heart, Wine, Activity, Coffee, Music, Trees, Plane, BookOpen, Sprout, type LucideIcon } from 'lucide-react'
 import { Navbar } from '@/components/Navbar'
 import { SectionTitle } from '@/components/SectionTitle'
-import { MidCTA } from '@/components/MidCTA'
 import { WorkTogetherCTA } from '@/components/WorkTogetherCTA'
 
 import headshot   from '@/assets/about-headshot.jpg'
@@ -91,20 +90,19 @@ export function About() {
               <h1 className="about__headline-name font-condensed font-bold text-cream">
                 Kristin <em className="font-sans italic text-coral">Burton.</em>
               </h1>
-              <p className="mt-5 text-[1.05rem] leading-[1.6] text-cream-muted italic">
-                Design-driven development, based in California. I build branded help centers,
-                marketing sites, and web apps where every detail earns its place.
+              <p className="mt-5 text-[1.05rem] leading-[1.6]  italic">
+                Designer and developer based in Petaluma, California. I build branded help centers, marketing sites, and web apps where every pixel earns its place.
               </p>
             </div>
 
-            {/* Stats with teal vertical dividers */}
-            <div className="about__stats flex items-center gap-0">
+            {/* Stats — case-study bar style */}
+            <div className="mt-8 flex rounded-sm border border-hairline bg-plum-card overflow-hidden">
               {stats.map(({ value, label }, i) => (
-                <motion.div key={label} className="flex items-center" initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}>
-                  {i > 0 && <div className="mx-8 h-12 w-px shrink-0 bg-teal opacity-50" />}
-                  <div>
-                    <p className="about__stat-value font-condensed font-bold text-coral mb-1">{value}</p>
-                    <p className="about__stat-label text-cream-subtle text-[0.78rem]">{label}</p>
+                <motion.div key={label} className="flex flex-1 items-center" initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}>
+                  {i > 0 && <div className="w-px self-stretch bg-hairline-2" />}
+                  <div className="flex flex-1 flex-col items-center justify-center px-4 py-6 text-center">
+                    <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-sand">{label}</p>
+                    <p className="mt-2 font-condensed text-[28px] font-bold leading-none text-cream">{value}</p>
                   </div>
                 </motion.div>
               ))}
@@ -117,40 +115,32 @@ export function About() {
       <section className="px-6 py-20 md:px-12 lg:px-20">
         <div className="mx-auto max-w-[760px]">
 
-          <SectionTitle size="md">14 years writing code. Then I followed the design.</SectionTitle>
-          <p className="mt-5 mb-14 text-[17px] leading-[1.75] text-cream-muted">
-            I started as a front-end developer building B2C websites, then moved into the B2B space
-            at Zendesk. Code gave me a unique balance — flexing the logical, problem-solving side
-            while watching creative ideas take shape on screen. Designing custom help centers at
-            Zendesk deepened my love for UX and visual storytelling, and eventually led me to shift
-            my focus fully into design.
+          <SectionTitle size="md">Self-taught, curious, and hooked from day one.</SectionTitle>
+          <p className="mt-5 mb-14 text-[17px] leading-[1.75] ">
+            I fell into front-end development at my first job out of college, taught on the job through books, tutorials, Stack Overflow, and a patient manager. I grew a real passion for it fast. There was something addictive about the challenge, watching code come to life on screen, solving problems, finding the best path forward. What I loved most was that it still let me be creative, not just in what I built, but in how I built it.
           </p>
 
           {/* Pull quote */}
-          <blockquote className="mb-16 border-l-[3px] border-coral pl-7">
+          {/* <blockquote className="mb-16 border-l-[3px] border-coral pl-7">
             <p className="font-condensed italic text-[28px] leading-[1.3] tracking-[-0.005em] text-coral-soft">
               "I know how it is built, and I know how it should feel."
             </p>
-          </blockquote>
+          </blockquote> */}
 
-          <SectionTitle size="md">Websites and apps as a creative playground.</SectionTitle>
-          <p className="mt-5 mb-14 text-[17px] leading-[1.75] text-cream-muted">
-            I love crafting experiences that feel intuitive, beautiful, and purposeful — whether
-            I'm laying out a page, choosing a palette, or pairing typography that just clicks.
-            What drives me is thinking about how a site makes someone feel the moment they land on it.
+          <SectionTitle size="md">Empathy is the best design tool.</SectionTitle>
+          <p className="mt-5 mb-14 text-[17px] leading-[1.75] ">
+            That appreciation for craft naturally led me to start thinking about the people on the other side of the screen. I became genuinely fascinated by how people navigate the web and apps, what feels intuitive, what causes friction, what paths they take that you never expected. Watching someone else use something I built made me a more thoughtful, empathetic designer and developer.
           </p>
 
-          <SectionTitle size="md">A developer's brain in every design.</SectionTitle>
-          <p className="mt-5 text-[17px] leading-[1.75] text-cream-muted">
-            Good designers never stop evolving. I'm constantly learning, pushing myself to create
-            work that is both technically sharp and visually compelling. Years on both sides of the
-            process means I bring something a little different to every project.
+          <SectionTitle size="md">AI changed how I build. In the best way.</SectionTitle>
+          <p className="mt-5 text-[17px] leading-[1.75] ">
+            These days I still write code, leaning on AI to move faster and experiment more freely. It has been a fun playground, ideas come to life quicker, and there is more room to explore animations and interactions that would have once eaten up too much dev time. I am constantly pushing myself, learning, and figuring out what works and what really does not.
           </p>
         </div>
       </section>
 
       {/* ── MID-PAGE CTA ── */}
-      <div className="px-6 pb-20 md:px-12 lg:px-20">
+      {/* <div className="px-6 pb-20 md:px-12 lg:px-20">
         <div className="mx-auto max-w-[1180px]">
           <MidCTA
             title="Want to see the work?"
@@ -159,7 +149,7 @@ export function About() {
             href="/projects"
           />
         </div>
-      </div>
+      </div> */}
 
       {/* ── OUTSIDE OF WORK ── */}
       <section className="about__section border-t border-hairline">
@@ -185,7 +175,7 @@ export function About() {
                     viewport={{ once: true }} transition={{ delay: i * 0.06 }}
                     className="flex items-start gap-3">
                     <Icon size={16} className="text-coral shrink-0 mt-[3px]" />
-                    <span className="about__hobby-text text-cream-muted text-[0.925rem]">{text}</span>
+                    <span className="about__hobby-text  text-[0.925rem]">{text}</span>
                   </motion.li>
                 )
               })}
