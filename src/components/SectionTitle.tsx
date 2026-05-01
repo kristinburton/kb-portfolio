@@ -10,9 +10,9 @@ type SectionTitleProps = {
 }
 
 const sizeClasses = {
-  xl: 'text-[54px]',
-  lg: 'text-[42px]',
-  md: 'text-[34px]',
+  xl: 'text-[36px] sm:text-[44px] md:text-[54px]',
+  lg: 'text-[28px] sm:text-[34px] md:text-[42px]',
+  md: 'text-[24px] sm:text-[28px] md:text-[34px]',
 }
 
 export function SectionTitle({ children, as: Tag = 'h2', size = 'lg', align = 'center', underline = false, className }: SectionTitleProps) {
