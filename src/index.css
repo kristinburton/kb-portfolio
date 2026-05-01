@@ -774,7 +774,7 @@
   /* ─── PhotoBox ────────────────────────────────────────────── */
   .photo-box {
     position: relative;
-    border-radius: 16px;
+    border-radius: 2px;
     overflow: hidden;
     aspect-ratio: 4/5;
     background: rgba(255,255,255,0.04);
