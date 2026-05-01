@@ -1,4 +1,5 @@
 import { Button } from '@/components/ui/button'
+import { profile } from '@/data/profile'
 
 export function WorkTogetherCTA() {
   return (
@@ -14,7 +15,7 @@ export function WorkTogetherCTA() {
           <a href="mailto:kristin@kristin-burton.com">Contact me</a>
         </Button>
         <Button variant="pill-ghost" size="pill-lg" asChild>
-          <a href="https://www.linkedin.com/in/kristinburton/" target="_blank" rel="noreferrer">
+          <a href={profile.socials.linkedin} target="_blank" rel="noreferrer">
             Connect on LinkedIn
           </a>
         </Button>
