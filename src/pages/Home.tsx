@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'
 import { useMemo, useState, useEffect } from 'react'
 import { motion } from 'motion/react'
 import { Button } from '@/components/ui/button'
@@ -72,6 +73,10 @@ export function Home() {
 
   return (
     <div className="min-h-screen bg-plum font-sans text-cream">
+      <Helmet>
+        <title>Kristin Burton — Designer &amp; Developer</title>
+        <meta name="description" content="Web designer and developer blending code and creativity. Specializing in help center design, branded websites, and pixel-perfect UI built to last." />
+      </Helmet>
       <section
         id="home-hero"
         className="home-hero home-hero--with-glows relative isolate overflow-hidden px-6 pb-50 pt-60 md:px-12 md:pt-[17.5rem] lg:px-20 lg:pb-[15rem]"

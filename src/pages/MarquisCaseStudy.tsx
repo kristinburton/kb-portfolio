@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'
 import { useState } from 'react'
 import { Navbar } from '@/components/Navbar'
 import { CaseStudyBack } from '@/components/CaseStudyBack'
@@ -70,6 +71,10 @@ export function MarquisCaseStudy() {
 
   return (
     <div className="min-h-screen bg-plum pt-16 font-sans text-cream">
+      <Helmet>
+        <title>Marquis Help Center — Kristin Burton</title>
+        <meta name="description" content="Designed and built a fully branded Zendesk help center and community forum for Marquis, serving 700+ banks and credit unions with role-based content and four product domains." />
+      </Helmet>
       <Navbar />
       <CaseStudyBack />
 

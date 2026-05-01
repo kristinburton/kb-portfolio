@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'
 import { useState } from 'react'
 import { Navbar } from '@/components/Navbar'
 import { Button } from '@/components/ui/button'
@@ -68,6 +69,10 @@ export function MEFCaseStudy() {
 
   return (
     <div className="min-h-screen bg-plum pt-16 font-sans text-cream">
+      <Helmet>
+        <title>MEF Auction Gala — Kristin Burton</title>
+        <meta name="description" content="Full event website and on-site presentation for the Moraga Education Foundation's Vegas-themed annual gala — designed and built to drive ticket sales and help raise $240K." />
+      </Helmet>
       <Navbar />
       <CaseStudyBack />
 

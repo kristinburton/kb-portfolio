@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'
 import { Navbar } from '@/components/Navbar'
 import { CaseStudyBack } from '@/components/CaseStudyBack'
 import { WantToSeeMore } from '@/components/WantToSeeMore'
@@ -73,6 +74,10 @@ const bottomStats = [
 export function PortfolioCaseStudy() {
   return (
     <div className="min-h-screen bg-plum pt-16 font-sans text-cream">
+      <Helmet>
+        <title>Portfolio Redesign — Kristin Burton</title>
+        <meta name="description" content="A case study about this very site — from a static HTML/CSS portfolio to a fully routed React app with animated transitions and a draggable before/after comparison." />
+      </Helmet>
       <Navbar />
       <CaseStudyBack />
 

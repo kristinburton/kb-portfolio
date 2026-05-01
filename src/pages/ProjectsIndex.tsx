@@ -6,6 +6,7 @@
 //  • Footer removed — mount once in App.tsx
 //  • Raw rgba() replaced with brand-fg-* tokens
 
+import { Helmet } from 'react-helmet-async'
 import { useState } from 'react'
 import { motion } from 'motion/react'
 import { caseStudies } from '@/data/caseStudies'
@@ -92,6 +93,10 @@ function ClientMarquee() {
 export function PortfolioIndex() {
   return (
     <div className="font-sans bg-plum min-h-screen">
+      <Helmet>
+        <title>Projects — Kristin Burton</title>
+        <meta name="description" content="Design and development projects — from help center redesigns for Life360, Marquis, and Adopt a Pet to custom-built event sites and internal dashboards." />
+      </Helmet>
       {/* ── HERO ── */}
       <section className="portfolio-hero px-8 pt-36 pb-20 text-center md:pt-44">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>

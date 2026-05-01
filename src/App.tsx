@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HelmetProvider } from 'react-helmet-async'
 import { MotionConfig } from 'motion/react'
 import { Navbar } from '@/components/Navbar'
 import { Home } from '@/pages/Home'
@@ -24,6 +25,7 @@ function WithNav({ children }: { children: React.ReactNode }) {
 
 export default function App() {
   return (
+    <HelmetProvider>
     <MotionConfig reducedMotion="user">
     <BrowserRouter>
       <ScrollToTop />
@@ -45,5 +47,6 @@ export default function App() {
       <Footer />
     </BrowserRouter>
     </MotionConfig>
+    </HelmetProvider>
   )
 }

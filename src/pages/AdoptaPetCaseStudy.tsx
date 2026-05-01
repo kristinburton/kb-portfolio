@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'
 import { useState } from 'react'
 import { Navbar } from '@/components/Navbar'
 import { CaseStudyBack } from '@/components/CaseStudyBack'
@@ -68,6 +69,10 @@ export function AdoptapetCaseStudy() {
 
   return (
     <div className="min-h-screen bg-plum pt-16 font-sans text-cream">
+      <Helmet>
+        <title>Adopt a Pet Help Centers — Kristin Burton</title>
+        <meta name="description" content="Three custom Zendesk help centers built from a single design system for Adopt a Pet — mobile-first, structured for an audience that is 75% on their phones." />
+      </Helmet>
       <Navbar />
       <CaseStudyBack />
 

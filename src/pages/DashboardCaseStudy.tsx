@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'
 import { Navbar } from '@/components/Navbar'
 import { CaseStudyBack } from '@/components/CaseStudyBack'
 // import { ParallaxGallery } from '@/components/ParallaxGallery'
@@ -13,6 +14,10 @@ export function DashboardCaseStudy() {
 
   return (
     <div className="min-h-screen bg-plum pt-16 font-sans text-cream">
+      <Helmet>
+        <title>Reporting Dashboard — Kristin Burton</title>
+        <meta name="description" content="Designed and developed a suite of internal data reporting dashboards for a federal benefits platform — from Figma mockups to fully coded, API-integrated dashboards with print-to-PDF export." />
+      </Helmet>
       <Navbar />
       <CaseStudyBack />
       <header id="dashboard-hero" className="px-4 pb-12 pt-16 text-center sm:px-6 sm:pt-20 md:px-10 md:pb-16 md:pt-28 lg:px-20">

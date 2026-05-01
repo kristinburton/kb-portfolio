@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'
 import { useEffect, useRef, useState } from 'react'
 import { motion } from 'motion/react'
 import { Heart, Wine, Activity, Coffee, Music, Trees, Plane, BookOpen, Sprout, type LucideIcon } from 'lucide-react'
@@ -64,6 +65,10 @@ export function About() {
 
   return (
     <div className="min-h-screen bg-plum pt-16 font-sans">
+      <Helmet>
+        <title>About — Kristin Burton</title>
+        <meta name="description" content="Designer and developer based in California with 14+ years of experience building branded help centers, marketing sites, and web apps." />
+      </Helmet>
       <Navbar />
 
       {/* ── HERO: Headshot + name + stats ── */}

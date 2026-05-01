@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'
 import { useState } from 'react'
 import { Navbar } from '@/components/Navbar'
 import { Button } from '@/components/ui/button'
@@ -68,6 +69,10 @@ export function Life360CaseStudy() {
 
   return (
     <div className="min-h-screen bg-plum pt-16 font-sans text-cream">
+      <Helmet>
+        <title>Life360 Help Center Unification — Kristin Burton</title>
+        <meta name="description" content="Led the design of a unified Zendesk help center merging Life360 and Tile after their acquisition — one mobile-first support experience for two brands and two user bases." />
+      </Helmet>
       <Navbar />
       <CaseStudyBack />
 
