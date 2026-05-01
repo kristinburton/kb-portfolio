@@ -15,7 +15,7 @@ export const profile = {
   tagline: 'Design-driven development.',
   email: 'kristin@kristin-burton.com',
   socials: {
-    linkedin: 'https://www.linkedin.com/in/kristin-burton/',
+    linkedin: 'https://www.linkedin.com/in/kristin-burton',
     github:   'https://github.com/kristinburton',
     instagram:'https://www.instagram.com/kristinburtoncreative/',
   },

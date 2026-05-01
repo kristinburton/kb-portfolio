@@ -50,7 +50,7 @@ export function Home() {
         title: '3 help centers with a single brand guide',
         imageSrc: adoptAPetMobileHome,
         imageAlt: 'Adopt a Pet mobile help center mockup',
-        linkTo: '/projects',
+        linkTo: '/projects/adoptapet-help-center-design',
         imagePanelClass: 'home-featured-card--adopt',
         textLeft: false,
       },
@@ -103,7 +103,7 @@ export function Home() {
             transition={{ duration: 0.7, ease: [0.25, 0.4, 0.25, 1], delay: 0.34 }}
           >
             <Button variant="pill-coral" size="pill-md" asChild>
-              <a href="#featured-work">See my recent work</a>
+              <a href="/projects/">See my recent projects</a>
             </Button>
             <Button variant="pill-ghost" size="pill-md" onClick={() => navigate('/about')}>
               About me
@@ -199,7 +199,7 @@ export function Home() {
         </div>
         <div className="mx-auto mt-16 flex justify-center md:mt-20">
           <Button variant="pill-ghost" size="pill-lg" asChild>
-            <a href="/projects">View all work →</a>
+            <a href="/projects">View all projects</a>
           </Button>
         </div>
       </section>
