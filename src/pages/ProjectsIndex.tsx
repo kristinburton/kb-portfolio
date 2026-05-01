@@ -35,7 +35,7 @@ import logoAirstream    from '@/assets/logos/airstream-logo.svg'
 
 // ── Cover images (from /assets) ──
 import life360Mobile from '@/assets/Life360-mobile-home.png'
-import marquisMobile from '@/assets/Marquis-mobile-home.png'
+import marquisMobile from '@/assets/marquis-mobile-home.png'
 import adoptapetMobile from '@/assets/Adoptapet-mobile-home.png'
 import MEFMobile from '@/assets/MEF-mobile-home.png'
 import DashboardMobile from '@/assets/Dashboard-mobile-home.png'
