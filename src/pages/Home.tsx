@@ -179,7 +179,7 @@ export function Home() {
                   transition={{ duration: 0.65, ease: [0.25, 0.4, 0.25, 1], delay: 0.18 }}
                 >
                   <div className="mx-auto w-full max-w-[486px]">
-                    <h2 className="font-condensed text-[34px] font-semibold leading-[1.02] tracking-[-0.01em] text-cream min-[390px]:text-[38px] sm:text-[44px] md:text-[52px] md:leading-[1.06] lg:text-[60px] lg:leading-[75px]">
+                    <h2 className="font-condensed text-[54px] font-semibold leading-[1.02] tracking-[-0.01em] text-cream min-[390px]:text-[36px] sm:text-[36px] md:text-[44px] md:leading-[1.06] lg:text-[54px] lg:leading-[54px]">
                       {project.client}
                     </h2>
                     <p className="mt-2 text-[14px] leading-6 text-cream min-[390px]:text-[15px] sm:mt-3 sm:text-[17px] md:leading-7 lg:mt-[14px] lg:text-2xl lg:leading-8">{project.title}</p>

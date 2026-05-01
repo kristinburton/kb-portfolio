@@ -97,9 +97,8 @@ export function DashboardCaseStudy() {
             Internal feedback from the team: "She crushed this so hard on the first pass I was worried we'd not have anything solid to improve on as we moved forward."
           </p>
         </section>
-      </main>    
-      {/* What I'd do differently */}
-      <section className="mt-20 md:mt-28 mb-20 md:mb-28">
+              {/* What I'd do differently */}
+      <section className="mt-20 md:mt-28">
         <div className="mx-auto max-w-[1280px]">
           <h2 className="font-condensed text-center font-condensed text-[30px] font-bold text-cream min-[390px]:text-[36px] md:text-[44px]">
             What I'd do differently
@@ -114,6 +113,8 @@ export function DashboardCaseStudy() {
           </p>
         </div>
       </section>
+      </main>    
+
       <WantToSeeMore />
     </div>
   )
