@@ -74,7 +74,7 @@ export function Home() {
   return (
     <div className="min-h-screen bg-plum font-sans text-cream">
       <Helmet>
-        <title>Kristin Burton — Designer &amp; Developer</title>
+        <title>Kristin Burton — Designer & Developer</title>
         <meta name="description" content="Web designer and developer blending code and creativity. Specializing in help center design, branded websites, and pixel-perfect UI built to last." />
       </Helmet>
       <section
@@ -90,7 +90,7 @@ export function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.25, 0.4, 0.25, 1] }}
           >
-            Kristin <em className="font-sans italic text-coral">Burton</em>
+            Kristin <em className="font-sans italic text-coral">Bu<span style={{letterSpacing: '0.08em'}}>r</span><span style={{letterSpacing: '0.01em'}}>t</span>on</em>
           </motion.h1>
           <motion.p
             className="mt-7 max-w-[790px] text-lg leading-8 text-cream md:text-2xl md:leading-10"
