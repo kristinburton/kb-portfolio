@@ -140,7 +140,7 @@ export function Home() {
               <article
                 key={project.id}
                 id={`featured-card-${project.id}`}
-                className={`grid w-full gap-6 py-4 sm:gap-7 md:gap-8 md:py-6 lg:min-h-[719.95px] lg:items-center lg:gap-12 lg:py-10 xl:gap-16 ${project.textLeft ? 'lg:grid-cols-[minmax(0,1fr)_minmax(0,1.5fr)] xl:grid-cols-[486.4px,729.6px]' : 'lg:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)] xl:grid-cols-[729.6px,486.4px]'}`}
+                className={`grid w-full gap-6 py-4 sm:gap-7 md:gap-8 md:py-6 lg:min-h-[719.95px] lg:items-center lg:gap-12 lg:py-10 xl:gap-16 ${project.textLeft ? 'lg:grid-cols-[minmax(0,1fr)_minmax(0,1.5fr)]' : 'lg:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)]'}`}
               >
                 <motion.div
                   className={project.textLeft ? 'order-1 lg:order-2' : 'order-1'}
