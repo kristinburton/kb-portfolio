@@ -28,7 +28,7 @@ export function Home() {
       {
         id: 'life360',
         client: 'Life360',
-        title: 'Mobile-First Unification of 2 Brands',
+        title: 'Designing clarity out of acquisition complexity for 50M+ users',
         imageSrc: life360MobileHome,
         imageAlt: 'Life360 mobile help center mockup',
         linkTo: '/projects/life360-help-center-design',
@@ -38,7 +38,7 @@ export function Home() {
       {
         id: 'marquis',
         client: 'Marquis',
-        title: 'Redesign to Engage Users',
+        title: 'Building a help center that feels like the product for 700+ banks and credit unions',
         imageSrc: marquisMobileHome,
         imageAlt: 'Marquis mobile help center mockup',
         linkTo: '/projects/marquis-help-center-design',
@@ -48,7 +48,7 @@ export function Home() {
       {
         id: 'adopt',
         client: 'Adopt a Pet',
-        title: '3 help centers with a single brand guide',
+        title: 'One brand system, two audiences, three help centers built for 75% mobile',
         imageSrc: adoptAPetMobileHome,
         imageAlt: 'Adopt a Pet mobile help center mockup',
         linkTo: '/projects/adoptapet-help-center-design',
@@ -98,8 +98,7 @@ export function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.25, 0.4, 0.25, 1], delay: 0.18 }}
           >
-            I blend code and creativity - a web designer and developer who cares about color,
-            layout, and every pixel in between.
+           I design and build web experiences people can trust and use, a designer who codes so nothing gets lost in translation.
           </motion.p>
           <motion.div
             className="mt-8 flex flex-wrap items-center gap-3"
