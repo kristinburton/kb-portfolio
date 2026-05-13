@@ -28,7 +28,7 @@ export function Home() {
       {
         id: 'life360',
         client: 'Life360',
-        title: 'Designing clarity out of acquisition complexity for 50M+ users',
+        title: 'Designed clarity out of brand complexity for 50M+ Life360 users',
         imageSrc: life360MobileHome,
         imageAlt: 'Life360 mobile help center mockup',
         linkTo: '/projects/life360-help-center-design',
@@ -38,7 +38,7 @@ export function Home() {
       {
         id: 'marquis',
         client: 'Marquis',
-        title: 'Building a help center that feels like the product for 700+ banks and credit unions',
+        title: 'Rebuilt trust through design for 700+ financial institutions',
         imageSrc: marquisMobileHome,
         imageAlt: 'Marquis mobile help center mockup',
         linkTo: '/projects/marquis-help-center-design',
@@ -48,7 +48,7 @@ export function Home() {
       {
         id: 'adopt',
         client: 'Adopt a Pet',
-        title: 'One brand system, two audiences, three help centers built for 75% mobile',
+        title: 'Unified three help centers under one brand system for a 75% mobile audience',
         imageSrc: adoptAPetMobileHome,
         imageAlt: 'Adopt a Pet mobile help center mockup',
         linkTo: '/projects/adoptapet-help-center-design',
