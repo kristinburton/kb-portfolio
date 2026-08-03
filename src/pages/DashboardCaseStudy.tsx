@@ -32,7 +32,7 @@ export function DashboardCaseStudy() {
       <section className="border-y border-hairline bg-plum-card px-4 sm:px-6 md:px-10 lg:px-20">
         <div className="mx-auto flex max-w-[1280px] flex-wrap justify-center md:flex-nowrap">
           {[
-            { label: 'Role',     value: 'Lead Designer & Developer', highlight: false },
+            { label: 'Role',     value: 'Web Designer + Developer', highlight: false },
             { label: 'Timeline', value: '3 months', highlight: false },
             { label: 'Tech Stack',   value: 'HTML, CSS, JavaScript', highlight: true  },
           ].map((item, i) => (
